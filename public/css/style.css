@@ -39,16 +39,55 @@ header > div h1 a {
 #top-nav > ul {
   display: flex;
 }
-#top-nav > ul li {
+#top-nav > ul > li {
+  position: relative;
   width: calc(100% / 7);
   text-align: center;
 }
-#top-nav > ul li + li {
+#top-nav > ul > li + li {
   margin-left: 10px;
 }
-#top-nav > ul li a {
+#top-nav > ul > li a {
   line-height: 50px;
   color: #fff;
   font-size: 1.2em;
   letter-spacing: 3px;
+}
+#top-nav > ul > li:hover {
+  background-color: #68471b;
+  border-radius: 10px 10px 0 0;
+}
+
+.inside-nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  background-color: #9e6923;
+  z-index: 1;
+}
+
+.nav-li {
+  z-index: 2;
+}
+.nav-li:after {
+  content: "";
+  position: absolute;
+  display: none;
+  border: 15px solid;
+  border-color: #68471b transparent transparent transparent;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.nav-li:hover {
+  box-shadow: 0px 5px 10px rgba(75, 75, 75, 0.3);
+}
+.nav-li:hover:after, .nav-li:hover .inside-nav {
+  display: block;
+}
+.nav-li ul {
+  padding: 15px 0 10px;
+  border-radius: 0 0 10px 10px;
 }

@@ -1,7 +1,7 @@
 $primary-color: rgb(255, 169, 71);
 $background:#fff;
-$white-text:#fff;
-$brown-text: rgb(104, 71, 27);
+$white:#fff;
+$brown: rgb(104, 71, 27);
 
 *{
     margin:0;
@@ -38,7 +38,7 @@ header>div{
         margin-bottom: 15px;
 
         a{
-            color: $brown-text;
+            color: $brown;
         }
     }
 }
@@ -46,19 +46,64 @@ header>div{
 #top-nav>ul{
     display: flex;
 
-    li{
+    >li{
+        position: relative;
         width: calc(100% / 7);
         text-align: center;
-
+        
+    
         &+li{
             margin-left:10px;
         }
         
         a{
             line-height: 50px;
-            color: $white-text;
+            color: $white;
             font-size: 1.2em;
             letter-spacing: 3px;
         }
+
+        &:hover{
+            background-color: $brown;
+            border-radius: 10px 10px 0 0;
+        }
     }
 }
+
+.inside-nav{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background-color: rgb(158, 105, 35);
+    z-index: 1;
+}
+
+.nav-li{
+    z-index: 2;
+    &:after{
+        content:"";
+        position: absolute;
+        display: none;
+        border: 15px solid ;
+        border-color: $brown transparent transparent transparent;
+        top:auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    &:hover{
+        box-shadow: 0px 5px 10px rgb(75, 75, 75,0.3);
+
+        &:after, .inside-nav{
+            display: block;
+        }
+    }
+
+    ul{
+        padding: 15px 0 10px;
+        border-radius: 0 0 10px 10px;
+    }
+}
+

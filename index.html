@@ -15,8 +15,20 @@
             <h1><a href="index.html">SEE-FOOD</a></h1>
             <nav id="top-nav">
                 <ul>
-                    <li><a href="#">最新消息</a></li>
-                    <li><a href="#">門市資訊</a></li>
+                    <li class="nav-li">
+                        <a href="#">最新消息</a>
+                        <ul class="inside-nav">
+                            <li><a href="#">最新消息</a></li>
+                            <li><a href="#">門市資訊</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-li">
+                        <a href="#">門市資訊</a>
+                        <ul class="inside-nav">
+                            <li><a href="#">最新消息</a></li>
+                            <li><a href="#">門市資訊</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">嚴選商品</a></li>
                     <li><a href="#">咖啡豆專區</a></li>
                     <li><a href="#">伯郎卡</a></li>
@@ -26,5 +38,44 @@
             </nav>
         </div>
     </header>
+
+    <img src="https://picsum.photos/1920/360" alt="" class="img-fluid">
+
+    <!-- .container>h1{商品列表}+.row>.col-4*6>img.img-fluid+p.title>a[href="#"]{標題$}^+p.desc -->
+    <div class="container">
+        <h1>商品列表</h1>
+        <div class="row">
+            <div class="col-4">
+                <img src="" alt="" class="img-fluid">
+                <p class="title"><a href="#">標題1</a></p>
+                <p class="description">內容</p>
+            </div>
+            <div class="col-4">
+                <img src="" alt="" class="img-fluid">
+                <p class="title"><a href="#">標題2</a></p>
+                <p class="description">內容</p>
+            </div>
+            <div class="col-4">
+                <img src="" alt="" class="img-fluid">
+                <p class="title"><a href="#">標題3</a></p>
+                <p class="description">內容</p>
+            </div>
+            <div class="col-4">
+                <img src="" alt="" class="img-fluid">
+                <p class="title"><a href="#">標題4</a></p>
+                <p class="description">內容</p>
+            </div>
+            <div class="col-4">
+                <img src="" alt="" class="img-fluid">
+                <p class="title"><a href="#">標題5</a></p>
+                <p class="description">內容</p>
+            </div>
+            <div class="col-4">
+                <img src="" alt="" class="img-fluid">
+                <p class="title"><a href="#">標題6</a></p>
+                <p class="description">內容</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
