@@ -24,12 +24,23 @@ a{
 
 .img-fluid{
     width: 100%;
+    display: block;
 }
 
 .product-radius{
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 2px 2px 5px rgb(161, 161, 161,0.5), -2px -2px 5px rgb(209, 230, 230);
+}
+
+.img-hidden{
+    overflow: hidden;
+}
+
+.img-scale:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+    opacity: 0.8;
 }
 
 body{
@@ -140,7 +151,7 @@ header>div{
     padding-bottom: 20px;
     margin-bottom: 20px;
 
-    img{
+    >div{
         margin-bottom: 10px;
     }
 

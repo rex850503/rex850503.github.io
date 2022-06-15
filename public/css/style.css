@@ -19,12 +19,23 @@ a {
 
 .img-fluid {
   width: 100%;
+  display: block;
 }
 
 .product-radius {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 2px 2px 5px rgba(161, 161, 161, 0.5), -2px -2px 5px #d1e6e6;
+}
+
+.img-hidden {
+  overflow: hidden;
+}
+
+.img-scale:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  opacity: 0.8;
 }
 
 body {
@@ -124,7 +135,7 @@ header > div h1 a {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.col img {
+.col > div {
   margin-bottom: 10px;
 }
 .col p:first-of-type {
