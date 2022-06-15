@@ -1,5 +1,7 @@
 $primary-color: rgb(197, 76, 76);
+$background:#fff;
 
 body{
-    background-color: $primary-color;
+    background-color: $background;
+    margin: 0;
 }
