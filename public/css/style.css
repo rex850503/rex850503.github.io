@@ -135,18 +135,19 @@ header > div h1 a {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.col > div {
+.col > a {
+  display: block;
   margin-bottom: 10px;
 }
 .col p:first-of-type {
   padding-bottom: 10px;
   font-size: 1.2em;
 }
+.col p:first-of-type > a {
+  color: #68471b;
+}
 .col p {
   padding-left: 15px;
-}
-.col a {
-  color: #68471b;
 }
 
 .col-4 {
@@ -169,9 +170,9 @@ header > div h1 a {
   margin-right: 0;
 }
 
-.col-2 {
+.col-6 {
   width: calc((100% - 20px) / 2);
 }
-.col-2:last-child(1), .col-2:last-child(2) {
+.col-6:last-child(1), .col-6:last-child(2) {
   margin-bottom: 0;
 }

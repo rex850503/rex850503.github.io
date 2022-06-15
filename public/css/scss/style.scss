@@ -151,22 +151,25 @@ header>div{
     padding-bottom: 20px;
     margin-bottom: 20px;
 
-    >div{
+    > a{
+        display: block;
         margin-bottom: 10px;
     }
 
     p:first-of-type{
         padding-bottom: 10px;
-        font-size: 1.2em
+        font-size: 1.2em;
+
+        > a{
+            color: $brown;
+        }
     }
 
     p{
         padding-left: 15px;
     }
 
-    a{
-        color: $brown;
-    }
+    
 }
 
 .col-4{
@@ -191,7 +194,7 @@ header>div{
     }
 }
 
-.col-2{
+.col-6{
     width: calc((100% - 20px) / 2);
 
     &:last-child(1), &:last-child(2){
