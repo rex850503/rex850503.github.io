@@ -21,6 +21,12 @@ a {
   width: 100%;
 }
 
+.product-radius {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(161, 161, 161, 0.5), -2px -2px 5px #d1e6e6;
+}
+
 body {
   background-color: #fff;
 }
@@ -115,11 +121,8 @@ header > div h1 a {
 }
 
 .col {
-  border-radius: 15px;
-  overflow: hidden;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  box-shadow: 3px 3px 5px #a1a1a1, -3px -3px 5px #dcecec;
 }
 .col img {
   margin-bottom: 10px;

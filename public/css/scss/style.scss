@@ -26,6 +26,12 @@ a{
     width: 100%;
 }
 
+.product-radius{
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgb(161, 161, 161,0.5), -2px -2px 5px rgb(209, 230, 230);
+}
+
 body{
     background-color: $background;
 }
@@ -131,11 +137,8 @@ header>div{
 }
 
 .col{
-    border-radius: 15px;
-    overflow: hidden;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    box-shadow: 3px 3px 5px rgb(161, 161, 161), -3px -3px 5px rgb(220, 236, 236);
 
     img{
         margin-bottom: 10px;
