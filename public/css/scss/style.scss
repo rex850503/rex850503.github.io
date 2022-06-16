@@ -37,10 +37,12 @@ a{
     overflow: hidden;
 }
 
-.imgScale:hover{
-    transform: scale(1.2);
+.imgScale{
     transition: all 0.5s;
-    opacity: 0.8;
+    &:hover{
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
 }
 
 .aButton{
@@ -257,7 +259,7 @@ footer{
     justify-content: space-between;
 }
 
-.topTool{
+.breadcrumb{
     margin-bottom: 20px;
 
     a,span{
@@ -319,6 +321,7 @@ footer{
         top:10px;
         left: 10px;
         box-shadow:2px 2px 5px rgba(105, 105, 105, 0.8);
+        z-index: 1;
 
         &:after{
             content: "new";

@@ -32,9 +32,11 @@ a {
   overflow: hidden;
 }
 
+.imgScale {
+  transition: all 0.5s;
+}
 .imgScale:hover {
   transform: scale(1.2);
-  transition: all 0.5s;
   opacity: 0.8;
 }
 
@@ -222,14 +224,14 @@ footer p {
   justify-content: space-between;
 }
 
-.topTool {
+.breadcrumb {
   margin-bottom: 20px;
 }
-.topTool a, .topTool span {
+.breadcrumb a, .breadcrumb span {
   color: #696969;
   font-size: 0.8em;
 }
-.topTool a:hover {
+.breadcrumb a:hover {
   color: #68471b;
 }
 
@@ -278,6 +280,7 @@ footer p {
   top: 10px;
   left: 10px;
   box-shadow: 2px 2px 5px rgba(105, 105, 105, 0.8);
+  z-index: 1;
 }
 .new .stick:after {
   content: "new";
