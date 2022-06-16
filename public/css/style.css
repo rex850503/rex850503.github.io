@@ -226,8 +226,11 @@ footer p {
   margin-bottom: 20px;
 }
 .topTool a, .topTool span {
-  color: #68471b;
+  color: #696969;
   font-size: 0.8em;
+}
+.topTool a:hover {
+  color: #68471b;
 }
 
 .leftTool {
