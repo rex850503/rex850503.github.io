@@ -265,3 +265,25 @@ footer p {
   color: #68471b;
   padding-left: 15px;
 }
+
+.new {
+  position: relative;
+}
+.new .stick {
+  position: absolute;
+  background-color: #ffa947;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  top: 10px;
+  left: 10px;
+}
+.new .stick:after {
+  content: "new";
+  display: block;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
