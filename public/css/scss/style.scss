@@ -293,6 +293,12 @@ footer{
 .rightTool{
     width: calc(100% - 300px);
 
+    h2{
+        font-size: 1.8em;
+        color: $brown;
+        margin-bottom:20px;
+    }
+
     h6{
         font-size: 1.1em;
         font-weight: 400;
