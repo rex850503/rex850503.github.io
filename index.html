@@ -1,137 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEE-FOOD</title>
-
-    <link rel="stylesheet" href="public/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEE-FOOD</title>
+  <link rel="stylesheet" href="public/css/style.css">
 </head>
+<!-- header>.container>h1{伯朗咖啡}+nav>ul>li*4>a[href="#"]{文字}-->
 <body>
-    <!-- header>.container>h1{伯朗咖啡}+nav>ul>li*4>a[href="#"]{文字} -->
-    <header>
-        <div class="container">
-            <h1><a href="index.html">SEE-FOOD</a></h1>
-            <nav id="top-nav">
-                <ul>
-                    <li class="nav-li">
-                        <a href="#" class="aButton">最新消息</a>
-                        <ul class="inside-nav">
-                            <li><a href="#" class="aButton">最新消息</a></li>
-                            <li><a href="#" class="aButton">門市資訊</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-li">
-                        <a href="#" class="aButton">門市資訊</a>
-                        <ul class="inside-nav">
-                            <li><a href="#" class="aButton">最新消息</a></li>
-                            <li><a href="#" class="aButton">門市資訊</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../product_list.html" class="aButton">嚴選商品</a></li>
-                    <li><a href="#" class="aButton">咖啡豆專區</a></li>
-                    <li><a href="#" class="aButton">伯郎卡</a></li>
-                    <li><a href="#" class="aButton">伯朗講堂</a></li>
-                    <li><a href="#" class="aButton">線上購物</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <img src="https://picsum.photos/1920/360" alt="" class="imgFluid">
-
-    <!-- .container>h1{商品列表}+.row>.col-4*7>a>img[src="https://baconmockup.com/300/300" 
-        class="imgFluid img-rounded"]^p.title.text-center>a{作品標題$}^p.date.text-center{2022-6-15} -->
-    <div class="product container">
-        <h2>商品列表</h2>
-        <div class="row-even">
-            <div class="col col-4 productRadius">
-                <a href="#" class="imgHidden">
-                    <img src="public/images/coffee01.jpg" alt="" class="imgFluid imgScale">
-                </a>
-                <p class="title"><a href="#">美式咖啡</a></p>
-                <p class="description">內容</p>
-            </div>
-            <div class="col col-4 productRadius">
-                <a href="#" class="imgHidden">
-                    <img src="public/images/coffee02.jpg" alt="" class="imgFluid imgScale">
-                </a>
-                <p class="title"><a href="#">拿鐵咖啡</a></p>
-                <p class="description">內容</p>
-            </div>
-            <div class="col col-4 productRadius">
-                <a href="#" class="imgHidden">
-                    <img src="public/images/coffee03.jpg" alt="" class="imgFluid imgScale">
-                </a>
-                <p class="title"><a href="#">濃縮咖啡</a></p>
-                <p class="description">內容</p>
-            </div>
-            <div class="col col-4 productRadius">
-                <a href="#" class="imgHidden">
-                    <img src="public/images/coffee01.jpg" alt="" class="imgFluid imgScale">
-                </a>
-                <p class="title"><a href="#">美式咖啡</a></p>
-                <p class="description">內容</p>
-            </div>
-            <div class="col col-4 productRadius">
-                <a href="#" class="imgHidden">
-                    <img src="public/images/coffee02.jpg" alt="" class="imgFluid imgScale">
-                </a>
-                <p class="title"><a href="#">拿鐵咖啡</a></p>
-                <p class="description">內容</p>
-            </div>
-            <div class="col col-4 productRadius">
-                <a href="#" class="imgHidden">
-                    <img src="public/images/coffee03.jpg" alt="" class="imgFluid imgScale">
-                </a>
-                <p class="title"><a href="#">濃縮咖啡</a></p>
-                <p class="description">內容</p>
-            </div>
-        </div>
+  <header>
+    <div class="container">
+      <div class="nav-logo">
+        <h1> <a href="index.html">SEE-FOOD</a></h1><a class="icon-menu" href="#">
+          <div class="burger"></div></a>
+      </div>
+      <nav id="top-nav">
+        <ul>
+          <li class="nav-li"><a class="aButton" href="#">最新消息</a>
+            <ul class="inside-nav">
+              <li><a class="aButton" href="#">最新消息</a></li>
+              <li><a class="aButton" href="#">門市資訊</a></li>
+            </ul>
+          </li>
+          <li class="nav-li"><a class="aButton" href="#">門市資訊</a>
+            <ul class="inside-nav">
+              <li><a class="aButton" href="#">最新消息</a></li>
+              <li><a class="aButton" href="#">門市資訊</a></li>
+            </ul>
+          </li>
+          <li><a class="aButton" href="../product_list.html">嚴選商品</a></li>
+          <li><a class="aButton" href="#">咖啡豆專區</a></li>
+          <li><a class="aButton" href="#">伯郎卡</a></li>
+          <li><a class="aButton" href="#">伯朗講堂</a></li>
+          <li><a class="aButton" href="#">線上購物</a></li>
+        </ul>
+      </nav>
     </div>
-    <!-- footer>.container>.row-even>dl.col-3*5>dt{標題$$}+dd*4>a{項目$$}^^^p.copyright.text-center{copyright} -->
-    <footer>
-        <div class="container">
-            <div class="row-even">
-                <dl class="footer-list">
-                    <dt>標題01</dt>
-                    <dd><a href="">項目01</a></dd>
-                    <dd><a href="">項目02</a></dd>
-                    <dd><a href="">項目03</a></dd>
-                    <dd><a href="">項目04</a></dd>
-                </dl>
-                <dl class="footer-list">
-                    <dt>標題02</dt>
-                    <dd><a href="">項目01</a></dd>
-                    <dd><a href="">項目02</a></dd>
-                    <dd><a href="">項目03</a></dd>
-                    <dd><a href="">項目04</a></dd>
-                </dl>
-                <dl class="footer-list">
-                    <dt>標題03</dt>
-                    <dd><a href="">項目01</a></dd>
-                    <dd><a href="">項目02</a></dd>
-                    <dd><a href="">項目03</a></dd>
-                    <dd><a href="">項目04</a></dd>
-                </dl>
-                <dl class="footer-list">
-                    <dt>標題04</dt>
-                    <dd><a href="">項目01</a></dd>
-                    <dd><a href="">項目02</a></dd>
-                    <dd><a href="">項目03</a></dd>
-                    <dd><a href="">項目04</a></dd>
-                </dl>
-                <dl class="footer-list">
-                    <dt>標題05</dt>
-                    <dd><a href="">項目01</a></dd>
-                    <dd><a href="">項目02</a></dd>
-                    <dd><a href="">項目03</a></dd>
-                    <dd><a href="">項目04</a></dd>
-                </dl>
-            </div>
-            <p class="copyright text-center">copyright</p>
-        </div>
-    </footer>
+  </header><img class="imgFluid" src="https://picsum.photos/1920/360" alt="">
+  <div class="product container">
+    <h2>商品列表</h2>
+    <div class="row-even">
+      <div class="col col-12 col-md-4 productRadius"><a class="imgHidden" href="#"><img class="imgFluid imgScale" src="public/images/coffee01.jpg" alt=""></a>
+        <p class="title"><a href="#">美式咖啡</a></p>
+        <p class="description">內容</p>
+      </div>
+      <div class="col col-12 col-md-4 productRadius"><a class="imgHidden" href="#"><img class="imgFluid imgScale" src="public/images/coffee02.jpg" alt=""></a>
+        <p class="title"><a href="#">拿鐵咖啡</a></p>
+        <p class="description">內容</p>
+      </div>
+      <div class="col col-12 col-md-4 productRadius"><a class="imgHidden" href="#"><img class="imgFluid imgScale" src="public/images/coffee03.jpg" alt=""></a>
+        <p class="title"><a href="#">濃縮咖啡</a></p>
+        <p class="description">內容</p>
+      </div>
+      <div class="col col-12 col-md-4 productRadius"><a class="imgHidden" href="#"><img class="imgFluid imgScale" src="public/images/coffee01.jpg" alt=""></a>
+        <p class="title"><a href="#">美式咖啡</a></p>
+        <p class="description">內容</p>
+      </div>
+      <div class="col col-12 col-md-4 productRadius"><a class="imgHidden" href="#"><img class="imgFluid imgScale" src="public/images/coffee02.jpg" alt=""></a>
+        <p class="title"><a href="#">拿鐵咖啡</a></p>
+        <p class="description">內容</p>
+      </div>
+      <div class="col col-12 col-md-4 productRadius"><a class="imgHidden" href="#"><img class="imgFluid imgScale" src="public/images/coffee03.jpg" alt=""></a>
+        <p class="title"><a href="#">濃縮咖啡</a></p>
+        <p class="description">內容</p>
+      </div>
+    </div>
+  </div>
+  <!-- footer>.container>.row-even>dl.col-3*5>dt{標題$$}+dd*4>a{項目$$}^^^p.copyright.text-center{copyright}-->
+  <footer>
+    <div class="container">
+      <div class="row-even">
+        <dl class="footer-list">
+          <dt>標題01</dt>
+          <dd><a href="">項目01</a></dd>
+          <dd><a href="">項目02</a></dd>
+          <dd><a href="">項目03</a></dd>
+          <dd><a href="">項目04</a></dd>
+        </dl>
+        <dl class="footer-list">
+          <dt>標題02</dt>
+          <dd><a href="">項目01</a></dd>
+          <dd><a href="">項目02</a></dd>
+          <dd><a href="">項目03</a></dd>
+          <dd><a href="">項目04</a></dd>
+        </dl>
+        <dl class="footer-list">
+          <dt>標題03</dt>
+          <dd><a href="">項目01</a></dd>
+          <dd><a href="">項目02</a></dd>
+          <dd><a href="">項目03</a></dd>
+          <dd><a href="">項目04</a></dd>
+        </dl>
+        <dl class="footer-list">
+          <dt>標題04</dt>
+          <dd><a href="">項目01</a></dd>
+          <dd><a href="">項目02</a></dd>
+          <dd><a href="">項目03</a></dd>
+          <dd><a href="">項目04</a></dd>
+        </dl>
+        <dl class="footer-list">
+          <dt>標題05</dt>
+          <dd><a href="">項目01</a></dd>
+          <dd><a href="">項目02</a></dd>
+          <dd><a href="">項目03</a></dd>
+          <dd><a href="">項目04</a></dd>
+        </dl>
+      </div>
+      <p class="copyright text-center">copyright</p>
+    </div>
+  </footer>
 </body>
-</html>

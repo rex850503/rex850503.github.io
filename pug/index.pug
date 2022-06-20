@@ -1,0 +1,137 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SEE-FOOD
+  link(rel='stylesheet' href='public/css/style.css')
+// header>.container>h1{伯朗咖啡}+nav>ul>li*4>a[href="#"]{文字}
+body
+    header
+        .container
+            .nav-logo
+                h1 
+                    a(href='index.html') SEE-FOOD
+                a.icon-menu(href="#")
+                    .burger
+            nav#top-nav
+                ul
+                    li.nav-li
+                        a.aButton(href='#') 最新消息
+                        ul.inside-nav
+                            li
+                                a.aButton(href='#') 最新消息
+                            li
+                                a.aButton(href='#') 門市資訊
+                    li.nav-li
+                        a.aButton(href='#') 門市資訊
+                        ul.inside-nav
+                            li
+                                a.aButton(href='#') 最新消息
+                            li
+                                a.aButton(href='#') 門市資訊
+                    li
+                        a.aButton(href='../product_list.html') 嚴選商品
+                    li
+                        a.aButton(href='#') 咖啡豆專區
+                    li
+                        a.aButton(href='#') 伯郎卡
+                    li
+                        a.aButton(href='#') 伯朗講堂
+                    li
+                        a.aButton(href='#') 線上購物
+    img.imgFluid(src='https://picsum.photos/1920/360' alt='')
+    .product.container
+        h2 商品列表
+        .row-even
+            .col.col-12.col-md-4.productRadius
+                a.imgHidden(href='#')
+                    img.imgFluid.imgScale(src='public/images/coffee01.jpg' alt='')
+                p.title
+                    a(href='#') 美式咖啡
+                p.description 內容
+            .col.col-12.col-md-4.productRadius
+                a.imgHidden(href='#')
+                    img.imgFluid.imgScale(src='public/images/coffee02.jpg' alt='')
+                p.title
+                    a(href='#') 拿鐵咖啡
+                p.description 內容
+            .col.col-12.col-md-4.productRadius
+                a.imgHidden(href='#')
+                    img.imgFluid.imgScale(src='public/images/coffee03.jpg' alt='')
+                p.title
+                    a(href='#') 濃縮咖啡
+                p.description 內容
+            .col.col-12.col-md-4.productRadius
+                a.imgHidden(href='#')
+                    img.imgFluid.imgScale(src='public/images/coffee01.jpg' alt='')
+                p.title
+                    a(href='#') 美式咖啡
+                p.description 內容
+            .col.col-12.col-md-4.productRadius
+                a.imgHidden(href='#')
+                    img.imgFluid.imgScale(src='public/images/coffee02.jpg' alt='')
+                p.title
+                    a(href='#') 拿鐵咖啡
+                p.description 內容
+            .col.col-12.col-md-4.productRadius
+                a.imgHidden(href='#')
+                    img.imgFluid.imgScale(src='public/images/coffee03.jpg' alt='')
+                p.title
+                    a(href='#') 濃縮咖啡
+                p.description 內容
+    // footer>.container>.row-even>dl.col-3*5>dt{標題$$}+dd*4>a{項目$$}^^^p.copyright.text-center{copyright}
+    footer
+        .container
+            .row-even
+                dl.footer-list
+                    dt 標題01
+                    dd
+                        a(href='') 項目01
+                    dd
+                        a(href='') 項目02
+                    dd
+                        a(href='') 項目03
+                    dd
+                        a(href='') 項目04
+                dl.footer-list
+                    dt 標題02
+                    dd
+                        a(href='') 項目01
+                    dd
+                        a(href='') 項目02
+                    dd
+                        a(href='') 項目03
+                    dd
+                        a(href='') 項目04
+                dl.footer-list
+                    dt 標題03
+                    dd
+                        a(href='') 項目01
+                    dd
+                        a(href='') 項目02
+                    dd
+                        a(href='') 項目03
+                    dd
+                        a(href='') 項目04
+                dl.footer-list
+                    dt 標題04
+                    dd
+                        a(href='') 項目01
+                    dd
+                        a(href='') 項目02
+                    dd
+                        a(href='') 項目03
+                    dd
+                        a(href='') 項目04
+                dl.footer-list
+                    dt 標題05
+                    dd
+                        a(href='') 項目01
+                    dd
+                        a(href='') 項目02
+                    dd
+                        a(href='') 項目03
+                    dd
+                        a(href='') 項目04
+            p.copyright.text-center copyright
