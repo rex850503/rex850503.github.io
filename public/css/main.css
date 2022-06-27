@@ -547,13 +547,13 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   }
 }
 
-.info {
+#kv .info {
   position: relative;
   text-align: center;
   padding: 100px 100px 0;
 }
 @media screen and (min-width: 992px) {
-  .info {
+  #kv .info {
     text-align: left;
     top: 50%;
     left: auto;
@@ -564,21 +564,21 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
     padding-right: 70px;
   }
 }
-.info h1 {
+#kv .info h1 {
   font-size: 250%;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 992px) {
-  .info h1 {
+  #kv .info h1 {
     font-size: 312.5%;
   }
 }
-.info p {
+#kv .info p {
   font-size: 112.5%;
   line-height: calc(2ex + 10px);
 }
 @media screen and (min-width: 992px) {
-  .info p {
+  #kv .info p {
     font-size: 150%;
   }
 }
@@ -636,6 +636,12 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 #kv > .imgwrap {
   width: 100%;
   text-align: right;
+  padding: 100px 0;
+}
+@media screen and (min-width: 768px) {
+  #kv > .imgwrap {
+    padding: 100px 0 80px;
+  }
 }
 @media screen and (min-width: 992px) {
   #kv > .imgwrap {
@@ -645,12 +651,18 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
     bottom: 0;
     right: 0;
     z-index: -1;
+    padding: 0;
   }
 }
 #kv > .imgwrap img {
   vertical-align: middle;
-  width: auto;
-  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  #kv > .imgwrap img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 #sfStoreWrap {
@@ -658,7 +670,7 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   background-color: #FFC940;
   padding-bottom: 80px;
 }
-#sfStoreWrap img {
+#sfStoreWrap > img {
   position: absolute;
   width: 100%;
   height: auto;
@@ -667,19 +679,20 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   z-index: 1;
 }
 #sfStoreWrap > .container {
+  position: relative;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
 }
 
 .filter {
+  position: absolute;
   width: 340px;
   background-color: #fff;
   color: #5B8600;
-  box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
-  border-radius: 10px;
+  box-shadow: 3px 3px 3px #EDAC4C, -3px -3px 3px #ffdf6b;
+  border-radius: 20px;
   padding: 30px 35px;
+  top: 10px;
+  left: 20px;
 }
 .filter dt {
   font-size: 150%;
@@ -690,35 +703,156 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   font-size: 125%;
   margin-bottom: 10px;
 }
-.filter input[type=checkbox].filtercheck {
+.filter label {
   position: relative;
+  padding-left: 30px;
+}
+.filter input[type=checkbox].filtercheck {
+  position: absolute;
   width: 20px;
   height: 20px;
-  margin-right: 5px;
+  opacity: 0.001;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
 }
-.filter input[type=checkbox].filtercheck::before {
+.filter input[type=checkbox].filtercheck:hover + .checkStyle {
+  box-shadow: inset 2px 2px 2px #EDAC4C, inset -2px -2px 2px #ffdf6b;
+}
+.filter input[type=checkbox].filtercheck:checked + .checkStyle {
+  box-shadow: inset 2px 2px 2px #EDAC4C, inset -2px -2px 2px #ffdf6b;
+}
+.filter input[type=checkbox].filtercheck:checked + .checkStyle::before {
   content: "";
   display: block;
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skew(0deg, -10deg) rotate(-45deg);
+}
+.filter .checkStyle {
   position: absolute;
   border-radius: 100%;
   width: 20px;
   height: 20px;
   background-color: #FFC940;
+  left: 0;
+  top: 0;
+  box-shadow: 1px 1px 2px #EDAC4C, -1px -1px 2px #ffdf6b;
 }
-.filter input[type=checkbox].filtercheck::after {
-  box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
+
+.storeWrap {
+  width: 100%;
+  padding-left: 430px;
+}
+.storeWrap h2 {
+  color: #fff;
+  font-size: 250%;
+  margin-bottom: 30px;
 }
 
 .storeList {
-  width: calc(100% - 410px);
-}
-.storeList > ul {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.storeList .store {
+
+.store {
   background-color: #fff;
   width: calc((100% - 140px) / 3.0001);
-  border-radius: 10px;
+  margin-right: 70px;
+  margin-bottom: 40px;
+  border-radius: 20px;
   box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
+  overflow: hidden;
+}
+.store:nth-child(3n) {
+  margin-right: 0;
+}
+.store .imgwrap {
+  position: relative;
+}
+.store .imgwrap > img {
+  vertical-align: bottom;
+}
+
+.stickgroup {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  bottom: -20px;
+}
+.stickgroup ul {
+  display: flex;
+}
+.stickgroup ul li {
+  background-color: #FFC940;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stickgroup ul li:nth-child(1) {
+  background-image: url("../images/Cow.svg");
+}
+.stickgroup ul li:nth-child(2) {
+  background-image: url("../images/Pork.svg");
+}
+.stickgroup ul li:nth-child(3) {
+  background-image: url("../images/Lamb.svg");
+}
+.stickgroup ul li:nth-child(4) {
+  background-image: url("../images/WholeFish.svg");
+}
+.stickgroup span {
+  background-color: #FF5454;
+  color: #fff;
+  font-size: 125%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 40px;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+.storeInfo {
+  padding: 40px 20px 15px;
+}
+.storeInfo h4 {
+  color: #5B8600;
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.storeInfo div {
+  position: relative;
+}
+.storeInfo div::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/filledredHreat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.storeInfo div span {
+  color: #fff;
+  font-size: 87.5%;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  padding: 3px 12px;
 }

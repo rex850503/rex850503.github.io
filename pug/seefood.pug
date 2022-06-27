@@ -12,8 +12,8 @@ body
   header
     nav#navbar.container
       a(href="seefood.html")#logo
-        img(src="../public/images/logo.png", alt="logo")
-        img(src="../public/images/SEEFOOD.png", alt="logoText")
+        img(src="../public/images/logo.svg", alt="logo")
+        img(src="../public/images/SEEFOOD.svg", alt="logoText")
       div#navbarRight.col-10.col-lg-8
         div
           input(type="text" placeholder="請輸入地址")#address.lightInput
@@ -57,54 +57,100 @@ body
         dl 
           dt 餐廳篩選
             dd 
-              label(for="")
+              label 我的最愛
                 input(type="checkbox" name="storeLike" value="storeLike").filtercheck
-              | 我的最愛
+                .checkStyle
             dd 
-              label 
-                input(type="checkbox" name="storeOpen" value="storeOpen")
-                | 營業中
+              label 營業中
+                input(type="checkbox" name="storeOpen" value="storeOpen").filtercheck
+                .checkStyle
           dt 飲食習慣
             dd 
-              label 
-                input(type="checkbox" name="beef" value="beef")
-                | 牛肉
+              label 牛肉
+                input(type="checkbox" name="beef" value="beef").filtercheck
+                .checkStyle
             dd 
-              label 
-                input(type="checkbox" name="pork" value="pork")
-                | 豬肉
+              label 豬肉
+                input(type="checkbox" name="pork" value="pork").filtercheck
+                .checkStyle
             dd 
-              label 
-                input(type="checkbox" name="chicken" value="chicken")
-                | 雞肉
+              label 羊肉
+                input(type="checkbox" name="chicken" value="chicken").filtercheck
+                .checkStyle
             dd 
-              label 
-                input(type="checkbox" name="seafood" value="seafood")
-                | 海鮮
-      .storeList
+              label 海鮮
+                input(type="checkbox" name="seafood" value="seafood").filtercheck
+                .checkStyle
+      .storeWrap
         h2 惜食餐廳
-        ul
+        ul.storeList
           li.store
-            img(src="", alt="").storeImg
-            .stickgroup
-              .foodgroup 
+            .imgwrap
+              img(src="../public/images/store3.jpg", alt="").storeImg
+              .stickgroup
+                ul
+                  li
+                  li
+                  li 
+                  li
+                span 營業
             .storeInfo 
               h4 永和豆漿
               div 
                 span#score 4.2
           li.store
-            img(src="", alt="").storeImg
-            .stickgroup
-              .foodgroup 
+            .imgwrap
+              img(src="../public/images/store2.jpg", alt="").storeImg
+              .stickgroup
+                ul
+                  li
+                  li
+                  li 
+                  li
+                span 營業
+            .storeInfo 
+              h4 三媽臭臭鍋
+              div 
+                span#score 4.2
+          li.store
+            .imgwrap
+              img(src="../public/images/store1.jpg", alt="").storeImg
+              .stickgroup
+                ul
+                  li
+                  li
+                  li 
+                  li
+                span 營業
+            .storeInfo 
+              h4 四海遊龍
+              div 
+                span#score 4.2
+          li.store
+            .imgwrap
+              img(src="../public/images/store3.jpg", alt="").storeImg
+              .stickgroup
+                ul
+                  li
+                  li
+                  li 
+                  li
+                span 營業
             .storeInfo 
               h4 永和豆漿
               div 
                 span#score 4.2
           li.store
-            img(src="", alt="").storeImg
-            .stickgroup
-              .foodgroup 
+            .imgwrap
+              img(src="../public/images/store2.jpg", alt="").storeImg
+              .stickgroup
+                ul
+                  li
+                  li
+                  li 
+                  li
+                span 營業
             .storeInfo 
-              h4 永和豆漿
+              h4 三媽臭臭鍋
               div 
                 span#score 4.2

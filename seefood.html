@@ -10,7 +10,7 @@
 </head>
 <body> 
   <header>
-    <nav class="container" id="navbar"><a href="seefood.html" id="logo"><img src="../public/images/logo.png" alt="logo"><img src="../public/images/SEEFOOD.png" alt="logoText"></a>
+    <nav class="container" id="navbar"><a href="seefood.html" id="logo"><img src="../public/images/logo.svg" alt="logo"><img src="../public/images/SEEFOOD.svg" alt="logoText"></a>
       <div class="col-10 col-lg-8" id="navbarRight">
         <div>
           <input class="lightInput" type="text" placeholder="請輸入地址" id="address">
@@ -51,67 +51,126 @@
         <dl> 
           <dt>餐廳篩選
             <dd> 
-              <label for="">
+              <label>我的最愛
                 <input class="filtercheck" type="checkbox" name="storeLike" value="storeLike">
-              </label>我的最愛
+                <div class="checkStyle"></div>
+              </label>
             </dd>
             <dd> 
-              <label> 
-                <input type="checkbox" name="storeOpen" value="storeOpen">營業中
+              <label>營業中
+                <input class="filtercheck" type="checkbox" name="storeOpen" value="storeOpen">
+                <div class="checkStyle"></div>
               </label>
             </dd>
           </dt>
           <dt>飲食習慣
             <dd> 
-              <label> 
-                <input type="checkbox" name="beef" value="beef">牛肉
+              <label>牛肉
+                <input class="filtercheck" type="checkbox" name="beef" value="beef">
+                <div class="checkStyle"></div>
               </label>
             </dd>
             <dd> 
-              <label> 
-                <input type="checkbox" name="pork" value="pork">豬肉
+              <label>豬肉
+                <input class="filtercheck" type="checkbox" name="pork" value="pork">
+                <div class="checkStyle"></div>
               </label>
             </dd>
             <dd> 
-              <label> 
-                <input type="checkbox" name="chicken" value="chicken">雞肉
+              <label>羊肉
+                <input class="filtercheck" type="checkbox" name="chicken" value="chicken">
+                <div class="checkStyle"></div>
               </label>
             </dd>
             <dd> 
-              <label> 
-                <input type="checkbox" name="seafood" value="seafood">海鮮
+              <label>海鮮
+                <input class="filtercheck" type="checkbox" name="seafood" value="seafood">
+                <div class="checkStyle"></div>
               </label>
             </dd>
           </dt>
         </dl>
       </div>
-      <div class="storeList">
+      <div class="storeWrap">
         <h2>惜食餐廳</h2>
-        <ul>
-          <li class="store"><img class="storeImg" src="" alt="">
-            <div class="stickgroup">
-              <div class="foodgroup"> </div>
+        <ul class="storeList">
+          <li class="store">
+            <div class="imgwrap"><img class="storeImg" src="../public/images/store3.jpg" alt="">
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
             </div>
             <div class="storeInfo"> 
               <h4>永和豆漿</h4>
               <div> <span id="score">4.2</span></div>
             </div>
           </li>
-          <li class="store"><img class="storeImg" src="" alt="">
-            <div class="stickgroup">
-              <div class="foodgroup"> </div>
+          <li class="store">
+            <div class="imgwrap"><img class="storeImg" src="../public/images/store2.jpg" alt="">
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+            </div>
+            <div class="storeInfo"> 
+              <h4>三媽臭臭鍋</h4>
+              <div> <span id="score">4.2</span></div>
+            </div>
+          </li>
+          <li class="store">
+            <div class="imgwrap"><img class="storeImg" src="../public/images/store1.jpg" alt="">
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+            </div>
+            <div class="storeInfo"> 
+              <h4>四海遊龍</h4>
+              <div> <span id="score">4.2</span></div>
+            </div>
+          </li>
+          <li class="store">
+            <div class="imgwrap"><img class="storeImg" src="../public/images/store3.jpg" alt="">
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
             </div>
             <div class="storeInfo"> 
               <h4>永和豆漿</h4>
               <div> <span id="score">4.2</span></div>
             </div>
           </li>
-          <li class="store"><img class="storeImg" src="" alt="">
-            <div class="stickgroup">
-              <div class="foodgroup"> </div>
+          <li class="store">
+            <div class="imgwrap"><img class="storeImg" src="../public/images/store2.jpg" alt="">
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
             </div>
             <div class="storeInfo"> 
-              <h4>永和豆漿</h4>
+              <h4>三媽臭臭鍋</h4>
               <div> <span id="score">4.2</span></div>
             </div>
           </li>
