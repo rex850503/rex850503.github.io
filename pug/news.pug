@@ -44,63 +44,36 @@ html(lang='en')
     //
       .container>h1{商品列表}+.row>.col-md-4*7>a>img[src="https://baconmockup.com/300/300"
       class="imgFluid img-rounded"]^p.title.text-center>a{作品標題$}^p.date.text-center{2022-6-15}
-    .product.container
-      .breadcrumb
-        a(href='#') 首頁
-        span >
-        a(href='#') 嚴選產品
-      .porductList
-        aside.leftTool.col-12.col-md-3
-          ul
-            li.leatToolLi
-              a.aButton(href='#') 最新飲品
-            li.leatToolLi
-              a.aButton(href='#') 飲品介紹
-            li.leatToolLi
-              a.aButton(href='#') 餐點介紹
-            li.leatToolLi
-              a.aButton(href='#') 周邊商品
-            li.leatToolLi
-              a.aButton(href='#') 伯朗咖啡券
-            li.leatToolLi
-              a.aButton(href='#') 伯朗墊子禮贈品票券
-            li.leatToolLi
-              a.aButton(href='#') 點餐單下載
-        .rightTool.col-12.col-md-9
-          h2 嚴選商品
-          .row-even
-            .col.col-12.col-md-4.productRadius.new
-              .stick
-              a.imgHidden(href='#')
-                img.imgFluid.imgScale(src='public/images/coffee01.jpg' alt='')
-              p 美式咖啡
-              p 60 元
-            .col.col-12.col-md-4.productRadius.new
-              .stick
-              a.imgHidden(href='#')
-                img.imgFluid.imgScale(src='public/images/coffee02.jpg' alt='')
-              p 拿鐵咖啡
-              p 80 元
-            .col.col-12.col-md-4.productRadius
-              a.imgHidden(href='#')
-                img.imgFluid.imgScale(src='public/images/coffee03.jpg' alt='')
-              p 濃縮咖啡
-              p 80 元
-            .col.col-12.col-md-4.productRadius
-              a.imgHidden(href='#')
-                img.imgFluid.imgScale(src='public/images/coffee01.jpg' alt='')
-              p 美式咖啡
-              p 60 元
-            .col.col-12.col-md-4.productRadius
-              a.imgHidden(href='#')
-                img.imgFluid.imgScale(src='public/images/coffee02.jpg' alt='')
-              p 拿鐵咖啡
-              p 80 元
-            .col.col-12.col-md-4.productRadius
-              a.imgHidden(href='#')
-                img.imgFluid.imgScale(src='public/images/coffee03.jpg' alt='')
-              p 濃縮咖啡
-              p 80 元
+    main.news.container
+        .breadcrumb
+            a(href='#') 首頁
+            span >
+            a(href='#') 嚴選產品
+        .postList
+            .post
+                .imgWrap.col-12.col-md-6.productRadius
+                    img(src="public/images/coffee01.jpg", alt="").imgFluid
+                .postInfo.col-12.col-md-6
+                    h6 美式咖啡
+                    p 美國咖啡豆
+                    p 美味好喝
+                    p 美式苦澀
+            .post
+                .imgWrap.col-12.col-md-6.productRadius
+                    img(src="public/images/coffee02.jpg", alt="").imgFluid
+                .postInfo.col-12.col-md-6
+                    h6 拿鐵咖啡
+                    p 非洲咖啡豆
+                    p 牛奶濃醇
+                    p 咖啡香醇
+            .post
+                .imgWrap.col-12.col-md-6.productRadius
+                    img(src="public/images/coffee03.jpg", alt="").imgFluid
+                .postInfo.col-12.col-md-6
+                    h6 濃縮咖啡
+                    p 歐洲咖啡豆
+                    p 加倍咖啡
+                    p 加倍苦澀
     // footer>.container>.row-even>dl.col-3*5>dt{標題$$}+dd*4>a{項目$$}^^^p.copyright.text-center{copyright}
     footer
       .container

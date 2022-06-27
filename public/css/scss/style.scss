@@ -2,6 +2,44 @@ $primary-color: rgb(255, 169, 71);
 $background:#fff;
 $white:#fff;
 $brown: rgb(104, 71, 27);
+$light-brown: rgb(126, 94, 51);
+
+// scss for迴圈練習
+// $i = index
+//from through 從1~3
+
+@for $i from 1 through 3{
+    .fz-#{$i}{
+        font-size: $i*1em;
+    }
+}
+
+@for $col from 1 through 12{
+    .col-#{$col}{
+        --num: calc(12 / #{$col});
+        width: calc(100% / var(--num));
+    }
+}
+
+@media screen and (min-width:768px){
+    @for $col from 1 through 12{
+        .col-md-#{$col}{
+            --num: calc(12 / #{$col});
+            width: calc(100% / var(--num) - 30px);
+            margin:0 15px 20px;
+        }
+    }  
+}
+
+@media screen and (min-width: 1200px){
+    @for $col from 1 through 12{
+        .col-lg-#{$col}{
+            --num: calc(12 / #{$col});
+            width: calc(100% / var(--num) - 30px);
+            margin:0 15px 20px;
+        }
+    }
+}
 
 *{
     margin:0;
@@ -56,6 +94,7 @@ body{
 }
 
 header{
+    position: relative;
     background-color: $primary-color;
     padding: 20px 0;
 
@@ -72,12 +111,12 @@ header>div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding:0 10px;
 
 
     @media screen and (min-width:768px){
         padding: 0;
-        margin-bottom: 15px;
     }
 
     >h1{
@@ -103,23 +142,61 @@ header>div{
     @media screen and (min-width:768px) {
         display: none;
     }
+
+    &:hover + #top-nav{
+        left:0%;
+    }
 }
+
 
 .burger{
     position: absolute;
-    height: 2px;
-    width: 20px;
-    background-color: #fff;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    &:before{
+        content: "";
+        display: block;
+        position: relative;
+        top: 7px;
+        left: auto;
+    }
+
+    &:after{
+        content: "";
+        display: block;
+        position: relative;
+        top: -9px;
+        left: auto;
+    }
+
+    &, &:after, &:before{
+        height: 2px;
+        width: 20px;
+        background-color: #fff;
+    }
 }
 
 #top-nav{
-    display: none;
+    // display: none;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    background-color: $brown;
+    transition: all 0.3s ease-in; 
+    width: 100%;
+    padding-top: 30px;
+    z-index: 1;
 
     @media screen and (min-width:768px){
         display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        background-color:transparent;
+        padding-top: 0;
+        
     }
 
     &.active{
@@ -155,10 +232,11 @@ header>div{
         }
 
         &:hover{
-            background-color: $brown;
+            background-color: $light-brown;
 
             @media screen and (min-width:768px) {
                 border-radius: 10px 10px 0 0;
+                background-color: $brown;
             }
         }
     }
@@ -388,39 +466,65 @@ footer{
     }
 }
 
-// scss for迴圈練習
-// $i = index
-//from through 從1~3
 
-@for $i from 1 through 3{
-    .fz-#{$i}{
-        font-size: $i*1em;
+
+.news{
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.post{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width:768px){
+    padding-left: 0;
+    padding-right: 0;
+
+        &:nth-child(even){
+            .imgWrap{
+                order: 2;
+            }
+        }  
     }
 }
 
-@for $col from 1 through 12{
-    .col-#{$col}{
-        --num: calc(12 / #{$col});
-        width: calc(100% / var(--num));
+.imgWrap{
+    margin-bottom: 20px;
+
+    @media screen and (min-width:768px){
+        margin-bottom: 0;
     }
 }
 
-@media screen and (min-width:768px){
-    @for $col from 1 through 12{
-        .col-md-#{$col}{
-            --num: calc(12 / #{$col});
-            width: calc(100% / var(--num) - 30px);
-            margin:0 15px 20px;
-        }
-    }  
-}
+.postInfo{
+    margin-bottom: 0;
 
-@media screen and (min-width: 1200px){
-    @for $col from 1 through 12{
-        .col-lg-#{$col}{
-            --num: calc(12 / #{$col});
-            width: calc(100% / var(--num) - 30px);
-            margin:0 15px 20px;
-        }
+    @media screen and (min-width:768px){
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h6,p{
+        text-align: center;
+    }
+
+    h6{
+        line-height: 70px;
+        font-size: 2em;
+        background-color: $primary-color;
+        border-radius: 5px;
+        color: $white;
+        margin-bottom: 20px;
+    }
+
+    p{
+        line-height: 50px;
+        font-size: 1.5em;
+        color: $brown;
     }
 }

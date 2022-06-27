@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEE-FOOD</title>
+  <link rel="stylesheet" href="public/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../public/js/main.js"></script>
+</head>
+<body> 
+  <header>
+    <nav class="container" id="navbar"><a href="seefood.html" id="logo"><img src="../public/images/logo.png" alt="logo"><img src="../public/images/SEEFOOD.png" alt="logoText"></a>
+      <div class="col-10 col-lg-8" id="navbarRight">
+        <div>
+          <input class="lightInput" type="text" placeholder="請輸入地址" id="address">
+        </div>
+        <div> 
+          <input class="lightInput" type="text" placeholder="搜尋店家" id="search">
+        </div>
+        <ul class="buttonList">
+          <li> <a class="button lightBotton" href="#">登入</a></li>
+          <li> <a class="button lightBotton" href="#">註冊</a></li>
+          <li> <a class="lightBotton" href="#" id="burger"></a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="sideMenu"> 
+      <div class="close"></div>
+      <div class="imgwrap imgHidden"><img src="../public/images/headshot.png" alt="headshot"></div>
+      <ul class="sideList">
+        <li> <a href="#">我的最愛</a></li>
+        <li> <a href="#">歷史訂單</a></li>
+        <li> <a href="#">付款方式</a></li>
+        <li> <a href="#">幫助</a></li>
+      </ul>
+    </section>
+  </header>
+  <section id="kv">
+    <div class="imgwrap"><img src="../public/images/product.jpg" alt="product"></div>
+    <div class="infowrap">
+      <div class="info"><img class="waterdrop" src="../public/images/waterdropLeftTop.png" alt="waterdrop"><img class="waterdrop" src="../public/images/waterdropRightTop.png" alt="waterdrop"><img class="waterdrop" src="../public/images/waterdropLeftBottom.png" alt="waterdrop">
+        <h1>惜食精神，共同努力</h1>
+        <p>臺灣還有許多在各個城鎮都有據點的「惜食行動」，鼓勵人們將用不到的食品捐出來給社區中的其他人，讓資源浪費最小化。</p>
+      </div><img src="../public/images/CookingChef.png" alt="">
+    </div>
+  </section>
+  <section id="sfStoreWrap"><img src="../public/images/waveborder.png" alt="">
+    <div class="container">
+      <div class="filter"> 
+        <dl> 
+          <dt>餐廳篩選
+            <dd> 
+              <label for="">
+                <input class="filtercheck" type="checkbox" name="storeLike" value="storeLike">
+              </label>我的最愛
+            </dd>
+            <dd> 
+              <label> 
+                <input type="checkbox" name="storeOpen" value="storeOpen">營業中
+              </label>
+            </dd>
+          </dt>
+          <dt>飲食習慣
+            <dd> 
+              <label> 
+                <input type="checkbox" name="beef" value="beef">牛肉
+              </label>
+            </dd>
+            <dd> 
+              <label> 
+                <input type="checkbox" name="pork" value="pork">豬肉
+              </label>
+            </dd>
+            <dd> 
+              <label> 
+                <input type="checkbox" name="chicken" value="chicken">雞肉
+              </label>
+            </dd>
+            <dd> 
+              <label> 
+                <input type="checkbox" name="seafood" value="seafood">海鮮
+              </label>
+            </dd>
+          </dt>
+        </dl>
+      </div>
+      <div class="storeList">
+        <h2>惜食餐廳</h2>
+        <ul>
+          <li class="store"><img class="storeImg" src="" alt="">
+            <div class="stickgroup">
+              <div class="foodgroup"> </div>
+            </div>
+            <div class="storeInfo"> 
+              <h4>永和豆漿</h4>
+              <div> <span id="score">4.2</span></div>
+            </div>
+          </li>
+          <li class="store"><img class="storeImg" src="" alt="">
+            <div class="stickgroup">
+              <div class="foodgroup"> </div>
+            </div>
+            <div class="storeInfo"> 
+              <h4>永和豆漿</h4>
+              <div> <span id="score">4.2</span></div>
+            </div>
+          </li>
+          <li class="store"><img class="storeImg" src="" alt="">
+            <div class="stickgroup">
+              <div class="foodgroup"> </div>
+            </div>
+            <div class="storeInfo"> 
+              <h4>永和豆漿</h4>
+              <div> <span id="score">4.2</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
