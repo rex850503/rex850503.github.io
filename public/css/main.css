@@ -224,7 +224,7 @@ header {
   width: 100%;
   height: 100px;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
 }
 header > #navbar {
   display: flex;
@@ -748,7 +748,8 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 
 .storeWrap {
   width: 100%;
-  padding-left: 430px;
+  padding-left: 410px;
+  padding-right: 20px;
 }
 .storeWrap h2 {
   color: #fff;
@@ -763,21 +764,42 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 
 .store {
   background-color: #fff;
-  width: calc((100% - 140px) / 3.0001);
-  margin-right: 70px;
-  margin-bottom: 40px;
+  width: calc((100% - 20px) / 2);
+  margin-right: 20px;
+  margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
   overflow: hidden;
 }
-.store:nth-child(3n) {
+.store:nth-child(2n) {
   margin-right: 0;
+}
+@media screen and (min-width: 1220px) {
+  .store {
+    width: calc((100% - 40px) / 3.001);
+  }
+  .store:nth-child(2n) {
+    margin-right: 20px;
+  }
+  .store:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1520px) {
+  .store {
+    width: calc((100% - 60px) / 4);
+  }
+  .store:nth-child(3n) {
+    margin-right: 20px;
+  }
+  .store:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 .store .imgwrap {
   position: relative;
-}
-.store .imgwrap > img {
-  vertical-align: bottom;
+  height: 200px;
+  background-image: url("../images/store3.jpg");
 }
 
 .stickgroup {
@@ -785,8 +807,8 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  bottom: -20px;
+  padding: 0 10px;
+  bottom: -15px;
 }
 .stickgroup ul {
   display: flex;
@@ -794,11 +816,12 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 .stickgroup ul li {
   background-color: #FFC940;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-right: 15px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 25px, 25px;
 }
 .stickgroup ul li:nth-child(1) {
   background-image: url("../images/Cow.svg");
@@ -815,12 +838,11 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 .stickgroup span {
   background-color: #FF5454;
   color: #fff;
-  font-size: 125%;
   font-weight: bold;
   letter-spacing: 1px;
-  line-height: 40px;
-  border-radius: 10px;
-  padding: 0 15px;
+  line-height: 30px;
+  border-radius: 5px;
+  padding: 0 5px;
 }
 
 .storeInfo {
