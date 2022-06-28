@@ -379,11 +379,16 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   display: none;
   position: fixed;
   background-color: #6CBE83;
-  width: 300px;
+  width: 100%;
   top: 0;
   right: 0;
   height: 100vh;
   box-shadow: -5px 0 5px #8080807a;
+}
+@media screen and (min-width: 768px) {
+  #sideMenu {
+    width: 300px;
+  }
 }
 #sideMenu.active {
   display: block;
@@ -514,7 +519,7 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 @media screen and (min-width: 992px) {
   #kv .infowrap {
     border-radius: 0 100% 100% 0;
-    width: 50%;
+    width: 55%;
     height: calc(100% + 300px);
     padding-left: calc((100% - 1640px) / 2);
     top: 50%;
@@ -684,6 +689,7 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 }
 
 .filter {
+  display: none;
   position: absolute;
   width: 340px;
   background-color: #fff;
@@ -693,6 +699,11 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   padding: 30px 35px;
   top: 10px;
   left: 20px;
+}
+@media screen and (min-width: 992px) {
+  .filter {
+    display: block;
+  }
 }
 .filter dt {
   font-size: 150%;
@@ -748,13 +759,56 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 
 .storeWrap {
   width: 100%;
-  padding-left: 410px;
+  padding-left: 20px;
   padding-right: 20px;
 }
-.storeWrap h2 {
-  color: #fff;
-  font-size: 250%;
+@media screen and (min-width: 992px) {
+  .storeWrap {
+    padding-left: 410px;
+  }
+}
+
+.storeTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .storeTitle {
+    padding-top: 0;
+  }
+}
+.storeTitle h2 {
+  color: #fff;
+  font-size: 187.5%;
+}
+@media screen and (min-width: 992px) {
+  .storeTitle h2 {
+    font-size: 250%;
+  }
+}
+
+.filterPopup {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 7px;
+}
+@media screen and (min-width: 992px) {
+  .filterPopup {
+    display: none;
+  }
+}
+.filterPopup img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .storeList {
@@ -764,15 +818,42 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 
 .store {
   background-color: #fff;
-  width: calc((100% - 20px) / 2);
-  margin-right: 20px;
+  width: 100%;
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
   overflow: hidden;
 }
-.store:nth-child(2n) {
-  margin-right: 0;
+@media screen and (min-width: 580px) {
+  .store {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+  }
+  .store:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 830px) {
+  .store {
+    width: calc((100% - 40px) / 3.001);
+  }
+  .store:nth-child(2n) {
+    margin-right: 20px;
+  }
+  .store:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .store {
+    width: calc((100% - 20px) / 2);
+  }
+  .store:nth-child(3n) {
+    margin-right: 20px;
+  }
+  .store:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 @media screen and (min-width: 1220px) {
   .store {
@@ -800,6 +881,7 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   position: relative;
   height: 200px;
   background-image: url("../images/store3.jpg");
+  background-size: cover;
 }
 
 .stickgroup {

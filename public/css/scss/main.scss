@@ -3,6 +3,7 @@ $font-14px:87.5%;
 $font-18px:112.5%;
 $font-20px:125%;
 $font-24px:150%;
+$font-30px:187.5%;
 $font-40px:250%;
 $font-50px:312.5%;
 $font-60px:375%;
@@ -253,11 +254,15 @@ header>#navbar>#navbarRight{
     display: none;
     position: fixed;
     background-color: #6CBE83;
-    width: 300px;
+    width: 100%;
     top: 0;
     right: 0;
     height: 100vh;
     box-shadow: -5px 0 5px #8080807a;
+
+    @media screen and (min-width:768px){
+        width: 300px;
+    }
 
     &.active{
         display: block;
@@ -405,7 +410,7 @@ header>#navbar>#navbarRight{
 
     @media screen and (min-width:992px){
         border-radius: 0 100% 100% 0;
-        width: 50%;
+        width: 55%;
         height: calc(100% + 300px);
         padding-left: calc((100% - 1640px) / 2);
         top: 50%;
@@ -574,6 +579,7 @@ header>#navbar>#navbarRight{
 
 
 .filter{
+    display: none;
     position: absolute;
     width: 340px;
     background-color: #fff;
@@ -583,6 +589,10 @@ header>#navbar>#navbarRight{
     padding: 30px 35px;
     top: 10px;
     left: 20px;
+
+    @media screen and (min-width:992px){
+        display: block;
+    }
 
     dt{
         font-size: $font-24px;
@@ -647,14 +657,56 @@ header>#navbar>#navbarRight{
 
 .storeWrap{
     width: 100%;
-    padding-left: 410px;
+    padding-left: 20px;
     padding-right: 20px;
+
+    @media screen and (min-width:992px){
+        padding-left: 410px;
+    }
+
+    
+}
+
+.storeTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width:992px){
+        padding-top: 0;
+    }
 
     h2{
         color: #fff;
-        font-size: $font-40px;
-        margin-bottom: 30px;
+        font-size: $font-30px;
+
+        @media screen and (min-width:992px){
+            font-size: $font-40px;
+        }
     } 
+}
+
+.filterPopup{
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 7px;
+        
+    @media screen and (min-width:992px){
+        display: none;  
+    }
+
+    img{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .storeList{
@@ -664,15 +716,43 @@ header>#navbar>#navbarRight{
 
 .store{
     background-color: #fff;
-    width: calc((100% - 20px) / 2);
-    margin-right: 20px;
+    width: 100%;
     margin-bottom: 30px;
     border-radius: 20px;
     box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
     overflow: hidden;
 
-    &:nth-child(2n){
-        margin-right: 0;
+    @media screen and (min-width:580px){
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:830px){
+        width: calc((100% - 40px) / 3.001);
+
+        &:nth-child(2n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(3n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:992px){
+        width: calc((100% - 20px) / 2);
+
+        &:nth-child(3n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(2n){
+            margin-right: 0;
+        }
     }
 
     @media screen and (min-width:1220px){
@@ -703,6 +783,7 @@ header>#navbar>#navbarRight{
         position: relative;
         height: 200px;
         background-image: url("../images/store3.jpg");
+        background-size: cover;
     }
 }
 
