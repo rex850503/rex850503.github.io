@@ -215,6 +215,12 @@ a {
   color: #CA6100;
 }
 
+.greenInput {
+  background-color: #E1F1DD;
+  border: none;
+  box-shadow: inset 2px 2px 2px #90a368, inset -2px -2px 2px #f0ffeb;
+}
+
 .imgHidden {
   overflow: hidden;
 }
@@ -225,6 +231,7 @@ header {
   height: 100px;
   position: fixed;
   z-index: 3;
+  box-shadow: 0px 2px 4px #edad4c;
 }
 header > #navbar {
   display: flex;
@@ -237,26 +244,26 @@ header > #navbar {
   padding: 0 20px;
 }
 
-header > #navbar > #logo {
+.logo {
   height: auto;
 }
-header > #navbar > #logo img {
+.logo img {
   vertical-align: middle;
   line-height: 100px;
   margin-right: 10px;
 }
-header > #navbar > #logo > img:nth-child(1) {
+.logo > img:nth-child(1) {
   display: inline;
   width: 50px;
   height: auto;
 }
-header > #navbar > #logo > img:nth-child(2) {
+.logo > img:nth-child(2) {
   display: none;
   width: 170px;
   height: auto;
 }
 @media screen and (min-width: 992px) {
-  header > #navbar > #logo > img:nth-child(2) {
+  .logo > img:nth-child(2) {
     display: inline;
   }
 }
@@ -432,11 +439,48 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   transform: translate(-50%, -50%);
 }
 
-.sideList {
+.listwrap {
   height: calc(100vh - 210px);
   background-color: #E1F1DD;
   padding: 10px 0;
 }
+
+.inputwrap {
+  position: relative;
+  padding: 15px 35px 15px 80px;
+}
+.inputwrap input[type=text] {
+  width: calc(100% - 15px);
+  border-radius: 20px;
+  font-size: 112.5%;
+  font-weight: bold;
+  color: #304D1D;
+  padding: 7px 15px 5px;
+  outline: none;
+}
+.inputwrap input[type=text]::placeholder {
+  color: #738f62;
+  border: none;
+}
+.inputwrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+}
+.inputwrap:nth-of-type(1)::before {
+  height: 23px;
+  width: 17px;
+  background-image: url("../images/green-map.svg");
+}
+.inputwrap:nth-of-type(2)::before {
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/green-search.svg");
+}
+
 .sideList li a {
   position: relative;
   display: block;
@@ -445,26 +489,34 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   font-weight: bold;
   padding: 15px 35px 15px 80px;
 }
-.sideList li:nth-child(1) a::after, .sideList li:nth-child(2) a::after, .sideList li:nth-child(3) a::after, .sideList li:nth-child(4) a::after {
+.sideList li a::after {
   content: "";
   display: block;
   position: absolute;
-  width: 25px;
-  height: 25px;
   top: 50%;
   left: 35px;
+  width: 25px;
+  height: 25px;
   transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .sideList li:nth-child(1) a::after {
-  background-image: url("../images/Love.png");
+  background-image: url("../images/member.svg");
 }
 .sideList li:nth-child(2) a::after {
-  background-image: url("../images/PurchaseOrder.png");
+  background-image: url("../images/register.svg");
 }
 .sideList li:nth-child(3) a::after {
-  background-image: url("../images/Wallet.png");
+  background-image: url("../images/Love.png");
 }
 .sideList li:nth-child(4) a::after {
+  background-image: url("../images/PurchaseOrder.png");
+}
+.sideList li:nth-child(5) a::after {
+  background-image: url("../images/Wallet.png");
+}
+.sideList li:nth-child(6) a::after {
   background-image: url("../images/Help.png");
 }
 .sideList li:hover {
@@ -474,16 +526,31 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   color: #fff;
 }
 .sideList li:hover:nth-child(1) a::after {
-  background-image: url("../images/LoveHover.png");
+  background-image: url("../images/memberHover.svg");
 }
 .sideList li:hover:nth-child(2) a::after {
-  background-image: url("../images/PurchaseOrderHover.png");
+  background-image: url("../images/registerHover.svg");
 }
 .sideList li:hover:nth-child(3) a::after {
-  background-image: url("../images/WalletHover.png");
+  background-image: url("../images/LoveHover.png");
 }
 .sideList li:hover:nth-child(4) a::after {
+  background-image: url("../images/PurchaseOrderHover.png");
+}
+.sideList li:hover:nth-child(5) a::after {
+  background-image: url("../images/WalletHover.png");
+}
+.sideList li:hover:nth-child(6) a::after {
   background-image: url("../images/HelpHover.png");
+}
+
+.sm-block {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .sm-block {
+    display: none;
+  }
 }
 
 #kv {
@@ -959,4 +1026,37 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   background-color: #c4c4c4;
   border-radius: 10px;
   padding: 3px 12px;
+}
+
+footer .container {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+footer .logo {
+  display: block;
+}
+footer .logo a {
+  margin-right: 0;
+}
+footer .logo, footer .connectionInfo {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer .logo, footer .connectionInfo {
+    margin-bottom: 0;
+  }
+}
+footer .connectionInfo a {
+  display: block;
+  color: #868686;
+  text-align: center;
 }

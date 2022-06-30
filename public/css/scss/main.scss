@@ -68,6 +68,12 @@ a{
     color:#CA6100;
 }
 
+.greenInput{
+    background-color: #E1F1DD;
+    border: none;
+    box-shadow: inset 2px 2px 2px #90a368, inset -2px -2px 2px #f0ffeb;
+}
+
 .imgHidden{
     overflow: hidden;
 }
@@ -78,6 +84,7 @@ header{
     height: 100px;
     position: fixed;
     z-index: 3;
+    box-shadow: 0px 2px 4px #edad4c;
 
     >#navbar{
         display: flex;
@@ -91,7 +98,7 @@ header{
     }
 }
 
-header>#navbar>#logo{
+.logo{
     height: auto;
 
     img{
@@ -311,11 +318,54 @@ header>#navbar>#navbarRight{
     }
 }
 
-.sideList{   
+.listwrap{
     height: calc(100vh - 210px);
     background-color: #E1F1DD;
     padding: 10px 0;
+}
 
+.inputwrap {
+    position: relative;
+    padding:15px 35px 15px 80px;
+
+    input[type=text]{
+        width: calc(100% - 15px);
+        border-radius: 20px;
+        font-size: $font-18px;
+        font-weight: bold;
+        color: #304D1D;
+        padding: 7px 15px 5px;
+        outline: none;
+
+        &::placeholder{
+            color:#738f62;
+            border: none;
+        }
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 35px;
+        transform: translateY(-50%);
+    }
+
+    &:nth-of-type(1)::before{
+        height: 23px;
+        width: 17px;
+        background-image: url("../images/green-map.svg");
+    }
+
+    &:nth-of-type(2)::before{
+        height: 24px;
+        width: 24px;
+        background-image: url("../images/green-search.svg");
+    }
+}
+
+.sideList{   
     li{
         a{
             position: relative;
@@ -324,32 +374,42 @@ header>#navbar>#navbarRight{
             font-size: $font-18px;
             font-weight: bold;
             padding: 15px 35px 15px 80px;
-        }
 
-        &:nth-child(1) a::after,&:nth-child(2) a::after,&:nth-child(3) a::after,&:nth-child(4) a::after{
-            content: "";
-            display: block;
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            top: 50%;
-            left: 35px;
-            transform: translateY(-50%);
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 35px;
+                width: 25px;
+                height: 25px;
+                transform: translateY(-50%);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
 
         &:nth-child(1) a::after{
-            background-image: url("../images/Love.png");
+            background-image: url("../images/member.svg");
         }
 
         &:nth-child(2) a::after{
-            background-image: url("../images/PurchaseOrder.png");
+            background-image: url("../images/register.svg");
         }
 
         &:nth-child(3) a::after{
-            background-image: url("../images/Wallet.png");
+            background-image: url("../images/Love.png");
         }
 
         &:nth-child(4) a::after{
+            background-image: url("../images/PurchaseOrder.png");
+        }
+
+        &:nth-child(5) a::after{
+            background-image: url("../images/Wallet.png");
+        }
+
+        &:nth-child(6) a::after{
             background-image: url("../images/Help.png");
         }
 
@@ -362,21 +422,37 @@ header>#navbar>#navbarRight{
             }
 
             &:nth-child(1) a::after{
-                background-image: url("../images/LoveHover.png");
+                background-image: url("../images/memberHover.svg");
             }
     
             &:nth-child(2) a::after{
-                background-image: url("../images/PurchaseOrderHover.png");
+                background-image: url("../images/registerHover.svg");
             }
-    
+
             &:nth-child(3) a::after{
-                background-image: url("../images/WalletHover.png");
+                background-image: url("../images/LoveHover.png");
             }
     
             &:nth-child(4) a::after{
+                background-image: url("../images/PurchaseOrderHover.png");
+            }
+    
+            &:nth-child(5) a::after{
+                background-image: url("../images/WalletHover.png");
+            }
+    
+            &:nth-child(6) a::after{
                 background-image: url("../images/HelpHover.png");
             }
         }
+    }
+}
+
+.sm-block{
+    display: block;
+
+    @media screen and (min-width:768px){
+        display: none;
     }
 }
 
@@ -873,3 +949,44 @@ header>#navbar>#navbarRight{
         }
     }
 }
+
+footer{
+    .container{
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto; 
+
+        @media screen and (min-width:768px){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+    }
+
+    .logo{
+        display: block;
+        
+        a{
+            margin-right: 0;
+        }
+    }
+
+    .logo,.connectionInfo{
+        margin-bottom: 10px;
+
+        @media screen and (min-width:768px){
+            margin-bottom: 0;
+        }
+
+    }
+
+    .connectionInfo{
+        a{
+            display: block;
+            color:#868686;
+            text-align: center;
+        }
+    }
+}
+

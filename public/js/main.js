@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    
+
 
     $("#burger").click(function(){
         $("#sideMenu").addClass("active");
@@ -7,5 +9,7 @@ $(document).ready(function(){
     $("#sideMenu .close").click(function(){
         $("#sideMenu").removeClass("active");
     })
+
+
 
 })
