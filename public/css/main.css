@@ -771,6 +771,16 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   .filter {
     display: block;
   }
+  .filter.navfixed {
+    position: fixed;
+    top: 120px;
+  }
+}
+@media screen and (min-width: 1641px) {
+  .filter.navfixed {
+    position: fixed;
+    left: calc(50% - 800px);
+  }
 }
 .filter dt {
   font-size: 150%;
