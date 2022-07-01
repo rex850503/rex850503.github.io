@@ -90,38 +90,40 @@ body
       img(src="../public/images/peppers.png", alt="青椒")
       img(src="../public/images/radish.png", alt="蘿蔔")
     div#filterStoreWrap.container
-      .filter 
-        dl 
-          dt 餐廳篩選
-            dd 
-              label 我的最愛
-                input(type="checkbox" name="storeLike" value="storeLike").filtercheck
-                .checkStyle
-            dd 
-              label 營業中
-                input(type="checkbox" name="storeOpen" value="storeOpen").filtercheck
-                .checkStyle
-          dt 飲食習慣
-            dd 
-              label 牛肉
-                input(type="checkbox" name="beef" value="beef").filtercheck
-                .checkStyle
-            dd 
-              label 豬肉
-                input(type="checkbox" name="pork" value="pork").filtercheck
-                .checkStyle
-            dd 
-              label 羊肉
-                input(type="checkbox" name="chicken" value="chicken").filtercheck
-                .checkStyle
-            dd 
-              label 海鮮
-                input(type="checkbox" name="seafood" value="seafood").filtercheck
-                .checkStyle
+      .filterWrap
+        .filter 
+          .close
+          dl 
+            dt 餐廳篩選
+              dd 
+                label 我的最愛
+                  input(type="checkbox" name="storeLike" value="storeLike").filtercheck
+                  .checkStyle
+              dd 
+                label 營業中
+                  input(type="checkbox" name="storeOpen" value="storeOpen").filtercheck
+                  .checkStyle
+            dt 飲食習慣
+              dd 
+                label 牛肉
+                  input(type="checkbox" name="beef" value="beef").filtercheck
+                  .checkStyle
+              dd 
+                label 豬肉
+                  input(type="checkbox" name="pork" value="pork").filtercheck
+                  .checkStyle
+              dd 
+                label 羊肉
+                  input(type="checkbox" name="chicken" value="chicken").filtercheck
+                  .checkStyle
+              dd 
+                label 海鮮
+                  input(type="checkbox" name="seafood" value="seafood").filtercheck
+                  .checkStyle
       .storeWrap
         .storeTitle
           h2 惜食餐廳
-          a(href="#").filterPopup.lightYellowShadow
+          #filterPopup.lightYellowShadow
             img(src="../public/images/Filter.svg", alt="")
         ul.storeList
           a(href="").store

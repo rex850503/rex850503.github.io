@@ -3,21 +3,23 @@ $(window).ready(function(){
     var filter = $("#filterStoreWrap").offset().top - 100;
 
     $("#loginBtn, #sideListLogin").click(function(){
-        $("#login, body").addClass("openLogin");
+        $("#login, body").addClass("open");
 
         if($("#sideMenu").hasClass("active")){
             $("#sideMenu").removeClass("active");
         }
     }) 
 
-    $("#login").on("click", closeLogin);
-    $("#login .close").on("click", closeLogin);
+    $("#login").on("click", closePopup);
+    $("#login .close").on("click", closePopup);
+    $(".filterWrap").on("click", closePopup);
+    $(".filterWrap .close").on("click", closePopup);
 
-    function closeLogin(e){
+    function closePopup(e){
         console.log(e.target) //可以知道被點擊的目標是誰
 
         if(this == e.target){
-            $("#login, body").removeClass("openLogin");
+            $("body, #login, .filterWrap").removeClass("open");
         }
     }; //#loginBtn end
 
@@ -29,12 +31,16 @@ $(window).ready(function(){
         $("#sideMenu").removeClass("active");
     }) //#burger end
 
+    $("#filterPopup").click(function(){
+        $(".filterWrap, body").addClass("open");
+    })
+    //#filterPopup end
 
     let filterFixed = $(window).scroll(function(){
         if($(this).scrollTop() >= filter){
-            $(".filter").addClass("navfixed");
+            $(".filterWrap").addClass("navfixed");
         }else{
-            $(".filter").removeClass("navfixed");
+            $(".filterWrap").removeClass("navfixed");
         }
     }) //filterFixed end
 

@@ -191,7 +191,7 @@
 body {
   font-size: 16px;
 }
-body.openLogin {
+body.open {
   overflow: hidden;
 }
 
@@ -575,7 +575,7 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 #login {
   display: none;
 }
-#login.openLogin {
+#login.open {
   display: block;
   position: fixed;
   width: 100vw;
@@ -586,7 +586,7 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   background-color: #FFC940;
 }
 @media screen and (min-width: 768px) {
-  #login.openLogin {
+  #login.open {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
@@ -1056,13 +1056,25 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   left: 100px;
 }
 
+@media screen and (min-width: 992px) {
+  .filterWrap.navfixed {
+    position: fixed;
+    top: 120px;
+  }
+}
+@media screen and (min-width: 1641px) {
+  .filterWrap.navfixed {
+    position: fixed;
+    left: calc(50% - 820px);
+  }
+}
+
 .filter {
   display: none;
   position: absolute;
   width: 340px;
   background-color: #fff;
   color: #5B8600;
-  box-shadow: 3px 3px 3px #EDAC4C, -3px -3px 3px #ffdf6b;
   border-radius: 20px;
   padding: 30px 35px;
   top: 10px;
@@ -1071,17 +1083,11 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 @media screen and (min-width: 992px) {
   .filter {
     display: block;
-  }
-  .filter.navfixed {
-    position: fixed;
-    top: 120px;
+    box-shadow: 3px 3px 3px #EDAC4C, -3px -3px 3px #ffdf6b;
   }
 }
-@media screen and (min-width: 1641px) {
-  .filter.navfixed {
-    position: fixed;
-    left: calc(50% - 800px);
-  }
+.filter > .close {
+  display: none;
 }
 .filter dt {
   font-size: 150%;
@@ -1135,6 +1141,41 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   box-shadow: 1px 1px 2px #EDAC4C, -1px -1px 2px #ffdf6b;
 }
 
+.filterWrap.open {
+  display: block;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  padding: 0;
+}
+.filterWrap.open .filter {
+  display: block;
+  position: absolute;
+  width: 340px;
+  background-color: #fff;
+  color: #5B8600;
+  border-radius: 20px;
+  padding: 20px 35px 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.filterWrap.open .filter .close {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.filterWrap.open .filter .close::after, .filterWrap.open .filter .close::before {
+  background-color: #DD974E;
+}
+
 .storeWrap {
   width: 100%;
   padding-left: 20px;
@@ -1168,19 +1209,20 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
   }
 }
 
-.filterPopup {
+#filterPopup {
   position: relative;
   display: block;
   width: 35px;
   height: 35px;
   border-radius: 7px;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
-  .filterPopup {
+  #filterPopup {
     display: none;
   }
 }
-.filterPopup img {
+#filterPopup img {
   position: absolute;
   width: 25px;
   height: 25px;
