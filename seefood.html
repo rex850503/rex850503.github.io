@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEE-FOOD</title>
   <link rel="stylesheet" href="public/css/main.css">
+  <link rel="shortcut icon" href="../public/images/logo.ico" type="image/x-icon">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../public/js/main.js"></script>
 </head>
@@ -13,15 +14,15 @@
     <nav class="container" id="navbar"><a class="logo" href="seefood.html"><img src="../public/images/logo.svg" alt="logo"><img src="../public/images/SEEFOOD.svg" alt="logoText"></a>
       <div class="col-10 col-lg-8" id="navbarRight">
         <div>
-          <input class="lightInput" type="text" placeholder="請輸入地址" id="address">
+          <input class="lightInput inputYellow" type="text" placeholder="請輸入地址" id="address">
         </div>
         <div> 
-          <input class="lightInput" type="text" placeholder="搜尋店家" id="search">
+          <input class="lightInput inputYellow" type="text" placeholder="搜尋店家" id="search">
         </div>
         <ul class="buttonList">
-          <li> <a class="button lightBotton" href="#">登入</a></li>
-          <li> <a class="button lightBotton" href="#">註冊</a></li>
-          <li> <a class="lightBotton" href="#" id="burger"></a></li>
+          <li> <a class="button lightYellowShadow" href="#" id="loginBtn">登入</a></li>
+          <li> <a class="button lightYellowShadow" href="#" id="registerbBtn">註冊</a></li>
+          <li> <a class="lightYellowShadow" href="#" id="burger"></a></li>
         </ul>
       </div>
     </nav>
@@ -36,7 +37,7 @@
           <input class="greenInput" type="text" placeholder="搜尋店家" id="menusearch">
         </div>
         <ul class="sideList">
-          <li class="sm-block"><a href="#">登入</a></li>
+          <li class="sm-block" id="sideListLogin"><a href="#">登入</a></li>
           <li class="sm-block"><a href="#">註冊</a></li>
           <li> <a href="#">我的最愛</a></li>
           <li> <a href="#">歷史訂單</a></li>
@@ -46,6 +47,26 @@
       </div>
     </section>
   </header>
+  <section id="login">
+    <div class="loginPopup lightYellowShadow">
+      <div class="close"></div>
+      <h2>會員登入</h2>
+      <div>
+        <label for="account">帳號:</label>
+        <input class="lightInput loginInput inputYellow" type="text" id="account">
+      </div>
+      <div>
+        <label for="account">密碼:</label>
+        <input class="lightInput loginInput inputYellow" type="text" id="password">
+      </div><a href="#"> 忘記密碼</a><a class="button lightYellowShadow" href="#">登入</a>
+      <p>其他登入/註冊</p>
+      <ul class="otherLogin">
+        <li class="lightYellowShadow"> <span>Facebook</span></li>
+        <li class="lightYellowShadow"> <span>Google</span></li>
+        <li class="lightYellowShadow"> <span>Apple</span></li>
+      </ul><a class="button lightYellowShadow" href="#">立即註冊</a>
+    </div>
+  </section>
   <section id="kv">
     <div class="imgwrap"><img src="../public/images/product.jpg" alt="product"></div>
     <div class="infowrap">
@@ -56,7 +77,7 @@
     </div>
   </section>
   <section id="sfStoreWrap"><img src="../public/images/waveborder.png" alt="">
-    <div class="container">
+    <div class="container" id="filterStoreWrap">
       <div class="filter"> 
         <dl> 
           <dt>餐廳篩選
@@ -103,7 +124,7 @@
       </div>
       <div class="storeWrap">
         <div class="storeTitle">
-          <h2>惜食餐廳</h2><a class="filterPopup lightBotton" href="#"><img src="../public/images/Filter.svg" alt=""></a>
+          <h2>惜食餐廳</h2><a class="filterPopup lightYellowShadow" href="#"><img src="../public/images/Filter.svg" alt=""></a>
         </div>
         <ul class="storeList">
           <li class="store">

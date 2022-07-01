@@ -5,6 +5,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title SEE-FOOD
   link(rel='stylesheet' href='public/css/main.css')
+  link(rel="shortcut icon", href="../public/images/logo.ico", type="image/x-icon")
   script(src="https://code.jquery.com/jquery-3.6.0.min.js")
   script(src="../public/js/main.js")
 
@@ -16,16 +17,16 @@ body
         img(src="../public/images/SEEFOOD.svg", alt="logoText")
       div#navbarRight.col-10.col-lg-8
         div
-          input(type="text" placeholder="請輸入地址")#address.lightInput
+          input(type="text" placeholder="請輸入地址")#address.lightInput.inputYellow
         div  
-          input(type="text" placeholder="搜尋店家")#search.lightInput
+          input(type="text" placeholder="搜尋店家")#search.lightInput.inputYellow
         ul.buttonList
           li 
-            a(href="#").button.lightBotton 登入
+            a(href="#")#loginBtn.button.lightYellowShadow 登入
           li 
-            a(href="#").button.lightBotton 註冊
+            a(href="#")#registerbBtn.button.lightYellowShadow 註冊
           li 
-            a(href="#")#burger.lightBotton
+            a(href="#")#burger.lightYellowShadow
     section#sideMenu 
       .close
       .imgwrap.imgHidden
@@ -36,7 +37,7 @@ body
         div.inputwrap.sm-block
           input(type="text" placeholder="搜尋店家")#menusearch.greenInput
         ul.sideList
-          li.sm-block
+          li#sideListLogin.sm-block
             a(href="#") 登入
           li.sm-block
             a(href="#") 註冊
@@ -48,6 +49,27 @@ body
             a(href="#") 付款方式
           li 
             a(href="#") 幫助
+  section#login
+      div.loginPopup.lightYellowShadow
+        .close
+        h2 會員登入
+        div
+          label(for="account") 帳號:
+          input(type="text")#account.lightInput.loginInput.inputYellow
+        div
+          label(for="account") 密碼:
+          input(type="text")#password.lightInput.loginInput.inputYellow
+        a(href="#")  忘記密碼
+        a(href="#").button.lightYellowShadow 登入
+        p 其他登入/註冊
+        ul.otherLogin
+          li.lightYellowShadow 
+            span Facebook
+          li.lightYellowShadow 
+            span Google
+          li.lightYellowShadow 
+            span Apple
+        a(href="#").button.lightYellowShadow 立即註冊
   section#kv
     .imgwrap
       img(src="../public/images/product.jpg", alt="product")
@@ -61,7 +83,7 @@ body
       img(src="../public/images/CookingChef.png", alt="")
   section#sfStoreWrap
     img(src="../public/images/waveborder.png", alt="")
-    div.container
+    div#filterStoreWrap.container
       .filter 
         dl 
           dt 餐廳篩選
@@ -93,7 +115,7 @@ body
       .storeWrap
         .storeTitle
           h2 惜食餐廳
-          a(href="#").filterPopup.lightBotton
+          a(href="#").filterPopup.lightYellowShadow
             img(src="../public/images/Filter.svg", alt="")
         ul.storeList
           li.store
