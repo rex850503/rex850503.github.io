@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).ready(function(){
     //計算 filter父層的高度 - header高度
     var filter = $("#filterStoreWrap").offset().top - 100;
 
