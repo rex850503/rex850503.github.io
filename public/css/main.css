@@ -425,22 +425,23 @@ header > #navbar > #navbarRight > .buttonList #burger:hover::after {
 }
 
 #sideMenu {
-  display: none;
   position: fixed;
   background-color: #6CBE83;
   width: 100%;
   top: 0;
-  right: 0;
+  right: -100%;
   height: 100vh;
   box-shadow: -5px 0 5px #8080807a;
+  transition: right 0.5s ease-out;
 }
 @media screen and (min-width: 768px) {
   #sideMenu {
     width: 300px;
+    right: -300px;
   }
 }
 #sideMenu.active {
-  display: block;
+  right: 0;
 }
 
 #sideMenu .imgwrap {

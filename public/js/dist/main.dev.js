@@ -47,6 +47,11 @@ $(window).ready(function () {
   $(window).resize(function () {
     //計算 filter父層的高度 - header高度
     filter = $("#filterStoreWrap").offset().top - 100;
+
+    if ($(window).width() >= 992) {
+      $("body, .filterWrap").removeClass("open");
+    }
+
     filterFixed();
   }); //window resize filterFixed end
 });
