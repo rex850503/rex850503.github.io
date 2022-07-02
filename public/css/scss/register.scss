@@ -102,7 +102,7 @@ $font-60px:375%;
         flex-direction: column;
 
         >a,>button{
-            display: block;
+             display: block;
             width: 100%;
             font-size: $font-18px;
             letter-spacing: 2px;
@@ -222,13 +222,14 @@ $font-60px:375%;
         margin-bottom: 20px;
     }
 
-    a{
+    button{
         &:nth-of-type(1){
-            display: inline;
-            width: auto;
+            width: fit-content;
             font-size: $font-14px;
             letter-spacing: 2px;
+            line-height: normal;
             padding: 5px 12px;
+            margin: 0 auto;
         }
         
         &:nth-of-type(2){
