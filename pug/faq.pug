@@ -1,0 +1,132 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SEE-FOOD|FAQ
+  link(rel='stylesheet' href='public/css/main.css')
+  link(rel='stylesheet' href='public/css/faq.css')
+  link(rel="shortcut icon", href="../public/images/logo.ico", type="image/x-icon")
+  script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+  script(src="../public/js/main.js")
+  script(src="../public/js/faq.js")
+
+body 
+  header
+    nav#navbar.container
+      a(href="seefood.html").logo
+        img(src="../public/images/logo.svg", alt="logo")
+        img(src="../public/images/SEEFOOD.svg", alt="logoText")
+      div#navbarRight.col-10.col-lg-8
+        div
+          input(type="text" placeholder="請輸入地址")#address.lightInput.inputYellow
+        div  
+          input(type="text" placeholder="搜尋店家")#search.lightInput.inputYellow
+        ul.buttonList
+          li 
+            a(href="#")#loginBtn.button.lightYellowShadow 登入
+          li 
+            a(href="#")#registerbBtn.button.lightYellowShadow 註冊
+          li 
+            a(href="#")#burger.lightYellowShadow
+    section#sideMenu 
+      .close
+      .imgwrap.imgHidden
+        img(src="../public/images/headshot.png", alt="headshot")
+      div.listwrap
+        div.inputwrap.sm-block
+          input(type="text" placeholder="請輸入地址")#menuaddress.greenInput
+        div.inputwrap.sm-block
+          input(type="text" placeholder="搜尋店家")#menusearch.greenInput
+        ul.sideList
+          li#sideListLogin.sm-block
+            a(href="#") 登入
+          li.sm-block
+            a(href="#") 註冊
+          li 
+            a(href="#") 我的最愛
+          li 
+            a(href="#") 歷史訂單
+          li 
+            a(href="#") 付款方式
+          li 
+            a(href="../faq.html") 幫助
+  section#login
+      div.loginPopup.lightYellowShadow
+        .close
+        h2 會員登入
+        div
+          label(for="account") 帳號:
+          input(type="text")#account.lightInput.loginInput.inputYellow
+        div
+          label(for="account") 密碼:
+          input(type="text")#password.lightInput.loginInput.inputYellow
+        a(href="#")  忘記密碼
+        a(href="#").button.lightYellowShadow 登入
+        p 其他登入/註冊
+        ul.otherLogin
+          li.lightYellowShadow 
+            span Facebook
+          li.lightYellowShadow 
+            span Google
+          li.lightYellowShadow 
+            span Apple
+        a(href="#").button.lightYellowShadow 立即註冊
+  section#faqwrap
+    .faqTitle
+        h2 FAQ 
+        .rolewrap
+            button.active 餐廳
+            button 客戶
+    ul.faqList.faqStore.active
+        li
+            h4.faqQuestion 如何成為「惜食餐廳」?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，麻煩您透過連絡電話、E-mail與我們聯絡，我們會盡快與您聯絡!
+        li
+            h4.faqQuestion 成為「惜食餐廳」的條件?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，除了需要提供餐廳、聯絡人資料外，還需要有一顆有愛的心!
+        li
+            h4.faqQuestion 如何成為「惜食餐廳」?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，麻煩您透過連絡電話、E-mail與我們聯絡，我們會盡快與您聯絡!
+        li
+            h4.faqQuestion 成為「惜食餐廳」的條件?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，除了需要提供餐廳、聯絡人資料外，還需要有一顆有愛的心!
+        li
+            h4.faqQuestion 如何成為「惜食餐廳」?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，麻煩您透過連絡電話、E-mail與我們聯絡，我們會盡快與您聯絡!
+        li
+            h4.faqQuestion 成為「惜食餐廳」的條件?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，除了需要提供餐廳、聯絡人資料外，還需要有一顆有愛的心!
+        li
+            h4.faqQuestion 如何成為「惜食餐廳」?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，麻煩您透過連絡電話、E-mail與我們聯絡，我們會盡快與您聯絡!
+        li
+            h4.faqQuestion 成為「惜食餐廳」的條件?
+            p.faqAns 首先感謝你願意成為「惜食夥伴」，除了需要提供餐廳、聯絡人資料外，還需要有一顆有愛的心!
+    ul.faqList.faqClient
+        li
+            h4.faqQuestion 如何訂購惜食餐盒?
+            p.faqAns 「首頁」的「惜食餐廳」有許多餐於惜食的店家，找到喜愛的餐廳「點擊惜食餐廳卡片」，即可進入購買頁面。
+        li
+            h4.faqQuestion 如何訂購惜食餐盒?
+            p.faqAns 「首頁」的「惜食餐廳」有許多餐於惜食的店家，找到喜愛的餐廳「點擊惜食餐廳卡片」，即可進入購買頁面。
+        li
+            h4.faqQuestion 如何訂購惜食餐盒?
+            p.faqAns 「首頁」的「惜食餐廳」有許多餐於惜食的店家，找到喜愛的餐廳「點擊惜食餐廳卡片」，即可進入購買頁面。
+        li
+            h4.faqQuestion 如何訂購惜食餐盒?
+            p.faqAns 「首頁」的「惜食餐廳」有許多餐於惜食的店家，找到喜愛的餐廳「點擊惜食餐廳卡片」，即可進入購買頁面。
+        li
+            h4.faqQuestion 如何訂購惜食餐盒?
+            p.faqAns 「首頁」的「惜食餐廳」有許多餐於惜食的店家，找到喜愛的餐廳「點擊惜食餐廳卡片」，即可進入購買頁面。
+  footer 
+    .container
+      a(href="seefood.html").logo
+          img(src="../public/images/logo.svg", alt="logo")
+          img(src="../public/images/SEEFOOD.svg", alt="logoText")
+      div.connectionInfo 
+        a(href="") 地址:台中市西區英才路40號
+        a(href="") 聯絡電話:03-5512225
+      div 
+        img(src="../public/images/Facebook.svg", alt="Facebook")
+        img(src="../public/images/Instagram.svg", alt="Facebook")

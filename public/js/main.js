@@ -1,7 +1,5 @@
 $(window).ready(function(){
-    //計算 filter父層的高度 - header高度
-    var filter = $("#filterStoreWrap").offset().top - 100;
-
+    
     $("#loginBtn, #sideListLogin").click(function(){
         $("#login, body").addClass("open");
 
@@ -30,29 +28,4 @@ $(window).ready(function(){
     $("#sideMenu .close").click(function(){
         $("#sideMenu").removeClass("active");
     }) //#burger end
-
-    $("#filterPopup").click(function(){
-        $(".filterWrap, body").addClass("open");
-    })
-    //#filterPopup end
-
-    let filterFixed = $(window).scroll(function(){
-        if($(this).scrollTop() >= filter){
-            $(".filterWrap").addClass("navfixed");
-        }else{
-            $(".filterWrap").removeClass("navfixed");
-        }
-    }) //filterFixed end
-
-    $(window).resize(function(){
-        //計算 filter父層的高度 - header高度
-        filter = $("#filterStoreWrap").offset().top - 100;
-        
-        if($(window).width() >= 992){
-            $("body, .filterWrap").removeClass("open");
-        }
-        filterFixed();
-    });//window resize filterFixed end
-
-    
 })

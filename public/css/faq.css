@@ -1,0 +1,163 @@
+body {
+  background-image: url("../images/background.png");
+}
+
+#kv {
+  padding: 100px 0;
+  height: auto;
+}
+
+#faqwrap {
+  padding: 170px 20px 70px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  #faqwrap {
+    padding-bottom: 170px;
+  }
+}
+
+.faqTitle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+.faqTitle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 90%;
+  background-color: #5B8600;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.faqTitle h2 {
+  color: #5B8600;
+  font-size: 40px;
+}
+
+.rolewrap button {
+  font-size: 18px;
+  border: 0;
+  padding: 0 10px;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -2px -2px 2px #edffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.rolewrap button:nth-of-type(1) {
+  color: #FF5454;
+}
+.rolewrap button:nth-of-type(1).active {
+  background-color: #FF5454;
+  box-shadow: inset 3px 3px 3px rgba(77, 77, 77, 0.2), inset -3px -3px 3px rgba(255, 255, 255, 0.5);
+}
+.rolewrap button:nth-of-type(2) {
+  color: #52D157;
+}
+.rolewrap button:nth-of-type(2).active {
+  background-color: #52D157;
+  box-shadow: inset 3px 3px 3px rgba(77, 77, 77, 0.2), inset -3px -3px 3px rgba(255, 255, 255, 0.5);
+}
+.rolewrap button.active {
+  color: #fff;
+}
+
+.faqList {
+  display: none;
+}
+.faqList.active {
+  display: block;
+}
+.faqList li {
+  position: relative;
+  background-color: #F9F5E6;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -2px -2px 2px #edffff;
+  padding: 17px 50px 17px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.faqList li::after, .faqList li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  border-radius: 5px;
+  top: 27px;
+  right: 17px;
+}
+.faqList li::before {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+.faqList li h4 {
+  position: relative;
+  display: inline;
+  font-size: 112.5%;
+}
+.faqList li h4::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 1px;
+  left: 0;
+  bottom: -8px;
+  transition: width 0.5s;
+}
+
+.faqList > li.active::before {
+  transform: rotate(0);
+}
+.faqList > li.active h4::before {
+  width: 100%;
+}
+.faqList > li.active p {
+  color: #4e4e4e;
+  padding-top: 15px;
+}
+.faqList > li.active .faqAns {
+  display: block;
+}
+
+.faqClient .faqQuestion {
+  color: #5B8600;
+}
+.faqClient li::after, .faqClient li::before, .faqClient li h4::before {
+  background-color: #5B8600;
+}
+
+.faqStore .faqQuestion {
+  color: #FF5454;
+}
+.faqStore li::after, .faqStore li::before, .faqStore li h4::before {
+  background-color: #FF5454;
+}
+
+.faqQuestion {
+  font-weight: bold;
+}
+
+.faqAns {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+}

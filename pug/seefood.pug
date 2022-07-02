@@ -3,11 +3,13 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title SEE-FOOD
-  link(rel='stylesheet' href='public/css/main.css')
+  title SEE-FOOD|惜食
   link(rel="shortcut icon", href="../public/images/logo.ico", type="image/x-icon")
+  link(rel='stylesheet' href='public/css/main.css')
+  link(rel='stylesheet' href='public/css/seefood.css')
   script(src="https://code.jquery.com/jquery-3.6.0.min.js")
   script(src="../public/js/main.js")
+  script(src="../public/js/seefood.js")
 
 body 
   header
@@ -48,7 +50,7 @@ body
           li 
             a(href="#") 付款方式
           li 
-            a(href="#") 幫助
+            a(href="../faq.html") 幫助
   section#login
       div.loginPopup.lightYellowShadow
         .close
