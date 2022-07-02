@@ -26,7 +26,7 @@ body
           li 
             a(href="#")#loginBtn.button.lightYellowShadow 登入
           li 
-            a(href="#")#registerbBtn.button.lightYellowShadow 註冊
+            a(href="../register.html")#registerbBtn.button.lightYellowShadow 註冊
           li 
             a(href="#")#burger.lightYellowShadow
     section#sideMenu 
@@ -42,7 +42,7 @@ body
           li#sideListLogin.sm-block
             a(href="#") 登入
           li.sm-block
-            a(href="#") 註冊
+            a(href="../register.html") 註冊
           li 
             a(href="#") 我的最愛
           li 
@@ -52,26 +52,26 @@ body
           li 
             a(href="../faq.html") 幫助
   section#login
-      div.loginPopup.lightYellowShadow
-        .close
-        h2 會員登入
-        div
-          label(for="account") 帳號:
-          input(type="text")#account.lightInput.loginInput.inputYellow
-        div
-          label(for="account") 密碼:
-          input(type="text")#password.lightInput.loginInput.inputYellow
-        a(href="#")  忘記密碼
-        a(href="#").button.lightYellowShadow 登入
-        p 其他登入/註冊
-        ul.otherLogin
-          li.lightYellowShadow 
-            span Facebook
-          li.lightYellowShadow 
-            span Google
-          li.lightYellowShadow 
-            span Apple
-        a(href="#").button.lightYellowShadow 立即註冊
+    div.loginPopup.lightYellowShadow
+      .close
+      h2 會員登入
+      div
+        label(for="account") 帳號:
+        input(type="text")#account.lightInput.loginInput.inputYellow
+      div
+        label(for="account") 密碼:
+        input(type="text")#password.lightInput.loginInput.inputYellow
+      a(href="#")  忘記密碼
+      a(href="#").button.lightYellowShadow 登入
+      p 其他登入/註冊
+      ul.otherLogin
+        li.lightYellowShadow 
+          span Facebook
+        li.lightYellowShadow 
+          span Google
+        li.lightYellowShadow 
+          span Apple
+      a(href="#").button.lightYellowShadow 立即註冊
   section#kv
     .imgwrap
       img(src="../public/images/product.jpg", alt="product")
@@ -86,11 +86,11 @@ body
   section#sfStoreWrap
     img(src="../public/images/waveborder.png", alt="")
     .bgImgGroup
-      img(src="../public/images/drumstick.png", alt="雞腿")
-      img(src="../public/images/Meat.png", alt="肉")
-      img(src="../public/images/vegetable.png", alt="蔬菜")
-      img(src="../public/images/peppers.png", alt="青椒")
-      img(src="../public/images/radish.png", alt="蘿蔔")
+      .drumstick 
+      .Meat
+      .vegetable
+      .peppers
+      .radish
     div#filterStoreWrap.container
       .filterWrap
         .filter 

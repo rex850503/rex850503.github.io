@@ -41,6 +41,7 @@ $font-60px:375%;
 }
 
 body{
+    background-image: url("../images/background.png");
     font-size: 16px;
 
     &.open{
@@ -113,6 +114,7 @@ a{
 .inputYellow{
     color:#CA6100;
     outline: none;
+    border:none;
 
     &::placeholder{
         color:#DD974E;
@@ -303,7 +305,7 @@ header>#navbar>#navbarRight{
 }
     
 #sideMenu {
-    position: fixed;
+    position: absolute;
     background-color: #6CBE83;
     width: 100%;
     top: 0;
@@ -311,6 +313,7 @@ header>#navbar>#navbarRight{
     height: 100vh;
     box-shadow: -5px 0 5px #8080807a;
     transition: right .5s ease-out;
+    z-index: 10;
 
     @media screen and (min-width:768px){
         width: 300px;
@@ -487,7 +490,7 @@ header>#navbar>#navbarRight{
         height: 100vh;
         top: 0;
         left: 0;
-        z-index: 4;
+        z-index: 10;
         background-color: #FFC940;
 
         @media screen and (min-width:768px){
@@ -659,7 +662,7 @@ header>#navbar>#navbarRight{
 footer{
     background-color: #fff;
     box-shadow: 0 -4px 4px rgba(0, 0, 0,0.05);
-    z-index: 5;
+    z-index: 1;
 
     .container{
         text-align: center;
