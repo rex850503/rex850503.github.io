@@ -703,3 +703,221 @@ footer{
     }
 }
 
+.storeList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.store{
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
+    overflow: hidden;
+
+    @media screen and (min-width:580px){
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:830px){
+        width: calc((100% - 40px) / 3.001);
+
+        &:nth-child(2n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(3n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:992px){
+        width: calc((100% - 20px) / 2);
+
+        &:nth-child(3n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:1220px){
+        width: calc((100% - 40px) / 3.001);
+
+        &:nth-child(2n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(3n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:1520px){
+        width: calc((100% - 60px) / 4);
+
+        &:nth-child(3n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(4n){
+            margin-right: 0;
+        }
+    }
+
+    &:hover{
+        .imgwrap::after{
+            bottom: 0%;
+        }
+
+        .imgwrap::before{
+            bottom: calc(50% - 25px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    }
+
+    .imgwrap{
+        position: relative;
+        height: 200px;
+        background-size: cover;
+
+        &::after, &::before{
+            position: absolute;
+            display: block;
+            bottom: 100%;
+            left: 0;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff98;
+            transition: bottom 0.5s ease-out;
+        }
+
+        &::before{
+            content: "惜食購Go";
+            position: absolute;
+            display: block;
+            width: auto;
+            height: auto;
+            background-color:#5B8600;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 3px 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.5s ease-out;
+            z-index: 1;
+        }
+    }
+}
+
+.stickgroup{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    bottom: -15px;
+    z-index: 1;
+
+    ul{
+        display: flex;
+
+        li{
+            background-color: #FFC940;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px, 25px;
+    
+            &:nth-child(1){
+                background-image: url("../images/Cow.svg");
+            }
+    
+            &:nth-child(2){
+                background-image: url("../images/Pork.svg");
+            }
+    
+            &:nth-child(3){
+                background-image: url("../images/Lamb.svg");
+            }
+    
+            &:nth-child(4){
+                background-image: url("../images/WholeFish.svg");
+            }
+        }
+    }
+    span{
+        background-color: #FF5454;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 30px;
+        border-radius: 5px;
+        padding: 0 5px;
+    }
+}
+
+.storeInfo{
+    padding: 40px 20px 15px;
+
+    h4{
+        color: #5B8600;
+        font-size: $font-24px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+}
+
+.scoreLike{
+    position: relative;
+    padding: 0px 20px 20px;
+
+    span{
+        color: #fff;
+        font-size: $font-14px;
+        background-color: rgb(196, 196, 196);
+        border-radius: 10px; 
+        padding: 3px 12px;
+    }
+
+    &.active::after{
+        background-image: url("../images/stroke-like.svg");
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-image: url("../images/filledredHreat.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: calc(50% - 10px);
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}

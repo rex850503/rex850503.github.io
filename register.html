@@ -80,7 +80,7 @@
       <div class="active" id="registerWay"> 
         <h2>請輸入電話號碼</h2>
         <input class="skinDownShadow inputYellow" type="text" placeholder="請輸入電話號碼">
-        <button class="skinUpShadow skinButton registerNext" data-step="#verification"> 下一步 </button><span>或</span>
+        <button class="skinUpShadow skinButton registerNext" data-step="#registerWay" data-nextstep="#verification"> 下一步 </button><span>或</span>
         <ul class="otherLogin">
           <li class="skinUpShadow"> <span>Facebook</span></li>
           <li class="skinUpShadow"> <span>Google</span></li>
@@ -92,12 +92,12 @@
       <div id="verification"> 
         <h2>請輸入四位數驗證碼</h2>
         <div class="code">
-          <input class="skinDownShadow inputYellow" type="text">
-          <input class="skinDownShadow inputYellow" type="text">
-          <input class="skinDownShadow inputYellow" type="text">
-          <input class="skinDownShadow inputYellow" type="text">
+          <input class="skinDownShadow inputYellow" type="text" maxlength="1">
+          <input class="skinDownShadow inputYellow" type="text" maxlength="1">
+          <input class="skinDownShadow inputYellow" type="text" maxlength="1">
+          <input class="skinDownShadow inputYellow" type="text" maxlength="1">
         </div>
-        <button class="skinUpShadow skinButton registerNext" data-step="#registerPassword">認證</button>
+        <button class="skinUpShadow skinButton registerNext" data-step="#verification" data-nextstep="#registerPassword">認證</button>
         <p>已經有帳號了嗎?<a href="">重新寄送驗證碼 </a></p>
       </div>
       <div id="registerPassword">
@@ -106,7 +106,7 @@
         <h2>確認密碼</h2>
         <input class="skinDownShadow inputYellow" type="password">
         <button class="viewtext skinUpShadow skinButton">查看密碼</button>
-        <button class="skinUpShadow skinButton registerNext" data-step="#registerSuccess">確認</button>
+        <button class="skinUpShadow skinButton registerNext" data-step="#registerPassword" data-nextstep="#registerSuccess">確認</button>
       </div>
       <div id="registerSuccess">
         <div class="success">
