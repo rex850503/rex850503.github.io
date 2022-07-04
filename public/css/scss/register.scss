@@ -9,19 +9,6 @@ $font-40px:250%;
 $font-50px:312.5%;
 $font-60px:375%;
 
-.skinUpShadow{
-    box-shadow: -3px -3px 3px rgb(255 255 221 / 25%), 3px 3px 3px rgb(194 194 194 / 25%);
-}
-
-.skinDownShadow{
-    box-shadow: inset 3px 3px 3px rgb(136 136 136 / 25%), inset -3px -3px 3px rgb(255, 245, 208, .25);
-}
-
-.skinButton{
-    background-color: #FFB240;
-    color: #fff;
-}
-
 #registerwrap{
     max-width: 570px;
     margin: 0 auto;

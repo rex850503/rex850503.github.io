@@ -270,6 +270,19 @@ a {
   box-shadow: inset 2px 2px 2px #90a368, inset -2px -2px 2px #f0ffeb;
 }
 
+.skinUpShadow {
+  box-shadow: -3px -3px 3px rgba(255, 255, 221, 0.25), 3px 3px 3px rgba(194, 194, 194, 0.25);
+}
+
+.skinDownShadow {
+  box-shadow: inset 3px 3px 3px rgba(136, 136, 136, 0.25), inset -3px -3px 3px rgba(255, 245, 208, 0.25);
+}
+
+.skinButton {
+  background-color: #FFB240;
+  color: #fff;
+}
+
 .imgHidden {
   overflow: hidden;
 }
@@ -788,61 +801,7 @@ footer .connectionInfo a {
   width: 100%;
   margin-bottom: 30px;
   border-radius: 20px;
-  box-shadow: 2px 2px 2px #EDAC4C, -2px -2px 2px #ffdf6b;
   overflow: hidden;
-}
-@media screen and (min-width: 580px) {
-  .store {
-    width: calc((100% - 20px) / 2);
-    margin-right: 20px;
-  }
-  .store:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 830px) {
-  .store {
-    width: calc((100% - 40px) / 3.001);
-  }
-  .store:nth-child(2n) {
-    margin-right: 20px;
-  }
-  .store:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  .store {
-    width: calc((100% - 20px) / 2);
-  }
-  .store:nth-child(3n) {
-    margin-right: 20px;
-  }
-  .store:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 1220px) {
-  .store {
-    width: calc((100% - 40px) / 3.001);
-  }
-  .store:nth-child(2n) {
-    margin-right: 20px;
-  }
-  .store:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 1520px) {
-  .store {
-    width: calc((100% - 60px) / 4);
-  }
-  .store:nth-child(3n) {
-    margin-right: 20px;
-  }
-  .store:nth-child(4n) {
-    margin-right: 0;
-  }
 }
 .store:hover .imgwrap::after {
   bottom: 0%;
@@ -873,7 +832,7 @@ footer .connectionInfo a {
   transition: bottom 0.5s ease-out;
 }
 .store .imgwrap::before {
-  content: "惜食購Go";
+  content: "惜食Go";
   position: absolute;
   display: block;
   width: auto;

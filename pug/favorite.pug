@@ -1,0 +1,216 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title SEE-FOOD|惜食
+  link(rel="shortcut icon", href="../public/images/logo.ico", type="image/x-icon")
+  link(rel='stylesheet' href='public/css/main.css')
+  link(rel='stylesheet' href='public/css/favorite.css')
+  script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+  script(src="../public/js/main.js")
+  script(src="../public/js/favorite.js")
+
+body 
+    header
+        nav#navbar.container
+            a(href="seefood.html").logo
+                img(src="../public/images/logo.svg", alt="logo")
+                img(src="../public/images/SEEFOOD.svg", alt="logoText")
+            div#navbarRight.col-10.col-lg-8
+                div
+                    input(type="text" placeholder="請輸入地址")#address.lightInput.inputYellow
+                div  
+                    input(type="text" placeholder="搜尋店家")#search.lightInput.inputYellow
+                ul.buttonList
+                    li 
+                        a(href="#")#loginBtn.button.lightYellowShadow 登入
+                    li 
+                        a(href="../register.html")#registerbBtn.button.lightYellowShadow 註冊
+                    li 
+                        a(href="#")#burger.lightYellowShadow
+        section#sideMenu 
+            .close
+            .imgwrap.imgHidden
+                img(src="../public/images/headshot.png", alt="headshot")
+            div.listwrap
+                div.inputwrap.sm-block
+                    input(type="text" placeholder="請輸入地址")#menuaddress.greenInput
+                div.inputwrap.sm-block
+                    input(type="text" placeholder="搜尋店家")#menusearch.greenInput
+                ul.sideList
+                    li#sideListLogin.sm-block
+                        a(href="#") 登入
+                    li.sm-block
+                        a(href="../register.html") 註冊
+                    li 
+                        a(href="../favorite.html") 我的最愛
+                    li 
+                        a(href="#") 歷史訂單
+                    li 
+                        a(href="#") 付款方式
+                    li 
+                        a(href="../faq.html") 幫助
+        section#login
+            div.loginPopup.lightYellowShadow
+                .close
+                h2 會員登入
+                div
+                    label(for="account") 帳號:
+                    input(type="text")#account.lightInput.loginInput.inputYellow
+                div
+                    label(for="account") 密碼:
+                    input(type="text")#password.lightInput.loginInput.inputYellow
+                a(href="#")  忘記密碼
+                a(href="#").button.lightYellowShadow 登入
+                p 其他登入/註冊
+                ul.otherLogin
+                    li.lightYellowShadow 
+                        span Facebook
+                    li.lightYellowShadow 
+                        span Google
+                    li.lightYellowShadow 
+                        span Apple
+                a(href="#").button.lightYellowShadow 立即註冊
+    section#favoritewrap.container
+        .storeWrap
+            .storeTitle
+                h2 我的最愛
+            ul.storeList
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+                li.store
+                    a(href="")
+                        .imgwrap(style='background-image:url(../public/images/store3.jpg)')
+                        .storeInfo 
+                            .stickgroup
+                                    ul
+                                        li
+                                        li
+                                        li 
+                                        li
+                                    span 營業
+                            h4 永和豆漿
+                    div.scoreLike
+                        span#score 4.2
+    footer 
+        .container
+            a(href="seefood.html").logo
+                img(src="../public/images/logo.svg", alt="logo")
+                img(src="../public/images/SEEFOOD.svg", alt="logoText")
+            div.connectionInfo 
+                a(href="") 地址:台中市西區英才路40號
+                a(href="") 聯絡電話:03-5512225
+            div 
+                img(src="../public/images/Facebook.svg", alt="Facebook")
+                img(src="../public/images/Instagram.svg", alt="Facebook")

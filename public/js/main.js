@@ -28,4 +28,12 @@ $(window).ready(function(){
     $("#sideMenu .close").click(function(){
         $("#sideMenu").removeClass("active");
     }) //#burger end
+
+    $(".scoreLike").click(function(){
+
+        let store = $(this).parent();
+        let storeIndex = store.index();
+
+        $(".store").eq(storeIndex).find(".scoreLike").toggleClass("active");
+    }) //.scoreLike end
 })

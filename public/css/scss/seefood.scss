@@ -547,3 +547,63 @@ $font-60px:375%;
         transform: translate(-50%, -50%);
     }
 }
+
+.store{
+
+    @media screen and (min-width:580px){
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:830px){
+        width: calc((100% - 40px) / 3.001);
+
+        &:nth-child(2n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(3n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:992px){
+        width: calc((100% - 20px) / 2);
+
+        &:nth-child(3n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:1220px){
+        width: calc((100% - 40px) / 3.001);
+
+        &:nth-child(2n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(3n){
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width:1520px){
+        width: calc((100% - 60px) / 4);
+
+        &:nth-child(3n){
+            margin-right: 20px;
+        }
+
+        &:nth-child(4n){
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEE-FOOD|惜食</title>
+  <link rel="shortcut icon" href="../public/images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/favorite.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/favorite.js"></script>
+</head>
+<body> 
+  <header>
+    <nav class="container" id="navbar"><a class="logo" href="seefood.html"><img src="../public/images/logo.svg" alt="logo"><img src="../public/images/SEEFOOD.svg" alt="logoText"></a>
+      <div class="col-10 col-lg-8" id="navbarRight">
+        <div>
+          <input class="lightInput inputYellow" type="text" placeholder="請輸入地址" id="address">
+        </div>
+        <div> 
+          <input class="lightInput inputYellow" type="text" placeholder="搜尋店家" id="search">
+        </div>
+        <ul class="buttonList">
+          <li> <a class="button lightYellowShadow" href="#" id="loginBtn">登入</a></li>
+          <li> <a class="button lightYellowShadow" href="../register.html" id="registerbBtn">註冊</a></li>
+          <li> <a class="lightYellowShadow" href="#" id="burger"></a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="sideMenu"> 
+      <div class="close"></div>
+      <div class="imgwrap imgHidden"><img src="../public/images/headshot.png" alt="headshot"></div>
+      <div class="listwrap">
+        <div class="inputwrap sm-block">
+          <input class="greenInput" type="text" placeholder="請輸入地址" id="menuaddress">
+        </div>
+        <div class="inputwrap sm-block">
+          <input class="greenInput" type="text" placeholder="搜尋店家" id="menusearch">
+        </div>
+        <ul class="sideList">
+          <li class="sm-block" id="sideListLogin"><a href="#">登入</a></li>
+          <li class="sm-block"><a href="../register.html">註冊</a></li>
+          <li> <a href="../favorite.html">我的最愛</a></li>
+          <li> <a href="#">歷史訂單</a></li>
+          <li> <a href="#">付款方式</a></li>
+          <li> <a href="../faq.html">幫助</a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="login">
+      <div class="loginPopup lightYellowShadow">
+        <div class="close"></div>
+        <h2>會員登入</h2>
+        <div>
+          <label for="account">帳號:</label>
+          <input class="lightInput loginInput inputYellow" type="text" id="account">
+        </div>
+        <div>
+          <label for="account">密碼:</label>
+          <input class="lightInput loginInput inputYellow" type="text" id="password">
+        </div><a href="#"> 忘記密碼</a><a class="button lightYellowShadow" href="#">登入</a>
+        <p>其他登入/註冊</p>
+        <ul class="otherLogin">
+          <li class="lightYellowShadow"> <span>Facebook</span></li>
+          <li class="lightYellowShadow"> <span>Google</span></li>
+          <li class="lightYellowShadow"> <span>Apple</span></li>
+        </ul><a class="button lightYellowShadow" href="#">立即註冊</a>
+      </div>
+    </section>
+  </header>
+  <section class="container" id="favoritewrap">
+    <div class="storeWrap">
+      <div class="storeTitle">
+        <h2>我的最愛</h2>
+      </div>
+      <ul class="storeList">
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+        <li class="store"><a href="">
+            <div class="imgwrap" style="background-image:url(../public/images/store3.jpg)"></div>
+            <div class="storeInfo"> 
+              <div class="stickgroup">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li> </li>
+                  <li></li>
+                </ul><span>營業</span>
+              </div>
+              <h4>永和豆漿</h4>
+            </div></a>
+          <div class="scoreLike"><span id="score">4.2</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer> 
+    <div class="container"><a class="logo" href="seefood.html"><img src="../public/images/logo.svg" alt="logo"><img src="../public/images/SEEFOOD.svg" alt="logoText"></a>
+      <div class="connectionInfo"> <a href="">地址:台中市西區英才路40號</a><a href="">聯絡電話:03-5512225</a></div>
+      <div> <img src="../public/images/Facebook.svg" alt="Facebook"><img src="../public/images/Instagram.svg" alt="Facebook"></div>
+    </div>
+  </footer>
+</body>

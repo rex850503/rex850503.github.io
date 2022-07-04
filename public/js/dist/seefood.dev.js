@@ -8,11 +8,6 @@ $(window).ready(function () {
     $(".filterWrap, body").addClass("open");
   }); //#filterPopup end
 
-  $(".scoreLike").click(function () {
-    var store = $(this).parent();
-    var storeIndex = store.index();
-    $(".store").eq(storeIndex).find(".scoreLike").toggleClass("active");
-  });
   var filterFixed = $(window).scroll(function () {
     if ($(this).scrollTop() >= filter) {
       $(".filterWrap").addClass("navfixed");
