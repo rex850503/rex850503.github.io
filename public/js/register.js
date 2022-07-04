@@ -8,8 +8,7 @@ $(window).ready(function(){
 
         if(step == "#registerWay" && $("#registerWay input").val() == ""){
             alert("請填寫電話號碼")
-        }else if(step == "#verification" && $("#verification input").val() == ""){
-            console.log($("#verification input").val())
+        }else if(step == "#verification" && $("#verification input").val().length < 1){
             alert("請填寫驗證碼")
         }else if(step == "#registerPassword" && $("#registerPassword input").val() == ""){
             alert("請填寫密碼")
