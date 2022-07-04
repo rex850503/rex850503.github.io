@@ -614,32 +614,6 @@
   transition: all 0.5s ease-out;
   z-index: 1;
 }
-.store > div {
-  position: relative;
-  padding: 0px 20px 20px;
-}
-.store > div span {
-  color: #fff;
-  font-size: 87.5%;
-  background-color: #c4c4c4;
-  border-radius: 10px;
-  padding: 3px 12px;
-}
-.store > div::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 25px;
-  height: 25px;
-  background-image: url("../images/filledredHreat.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  top: calc(50% - 10px);
-  right: 20px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
 
 .stickgroup {
   position: absolute;
@@ -693,4 +667,34 @@
   font-size: 150%;
   font-weight: bold;
   margin-bottom: 25px;
+}
+
+.scoreLike {
+  position: relative;
+  padding: 0px 20px 20px;
+}
+.scoreLike span {
+  color: #fff;
+  font-size: 87.5%;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  padding: 3px 12px;
+}
+.scoreLike.active::after {
+  background-image: url("../images/stroke-like.svg");
+}
+.scoreLike::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/filledredHreat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: calc(50% - 10px);
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

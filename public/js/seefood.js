@@ -8,6 +8,14 @@ $(window).ready(function(){
     })
     //#filterPopup end
 
+    $(".scoreLike").click(function(){
+
+        let store = $(this).parent();
+        let storeIndex = store.index();
+
+        $(".store").eq(storeIndex).find(".scoreLike").toggleClass("active");
+    })
+
     let filterFixed = $(window).scroll(function(){
         if($(this).scrollTop() >= filter){
             $(".filterWrap").addClass("navfixed");
