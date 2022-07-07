@@ -35,4 +35,6 @@ $(window).ready(function () {
     var storeIndex = store.index();
     $(".store").eq(storeIndex).find(".scoreLike").toggleClass("active");
   }); //.scoreLike end
+
+  new WOW().init();
 });

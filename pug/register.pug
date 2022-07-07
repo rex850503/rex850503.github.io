@@ -7,9 +7,6 @@ head
   link(rel="shortcut icon", href="../public/images/logo.ico", type="image/x-icon")
   link(rel='stylesheet' href='public/css/main.css')
   link(rel='stylesheet' href='public/css/register.css')
-  script(src="https://code.jquery.com/jquery-3.6.0.min.js")
-  script(src="../public/js/main.js")
-  script(src="../public/js/register.js")
 
 body 
   header
@@ -46,7 +43,7 @@ body
           li 
             a(href="../favorite.html") 我的最愛
           li 
-            a(href="#") 歷史訂單
+            a(href="../order-history.html") 歷史訂單
           li 
             a(href="#") 付款方式
           li 
@@ -62,7 +59,7 @@ body
           label(for="account") 密碼:
           input(type="text")#password.lightInput.loginInput.inputYellow
         a(href="#")  忘記密碼
-        a(href="#").button.lightYellowShadow 登入
+        a(href="../seefood.html").button.lightYellowShadow 登入
         p 其他登入/註冊
         ul.otherLogin
           li.lightYellowShadow 
@@ -71,7 +68,7 @@ body
             span Google
           li.lightYellowShadow 
             span Apple
-        a(href="#").button.lightYellowShadow 立即註冊
+        a(href="../register.html").button.lightYellowShadow 立即註冊
   section#registerwrap 
     ul.stepwrap
         li.step.active
@@ -140,3 +137,6 @@ body
       div 
         img(src="../public/images/Facebook.svg", alt="Facebook")
         img(src="../public/images/Instagram.svg", alt="Facebook")
+  script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+  script(src="../public/js/main.js")
+  script(src="../public/js/register.js")

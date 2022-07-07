@@ -16,6 +16,12 @@ $(window).ready(function(){
         }
     }) //filterFixed end
 
+    $(window).scroll(function(){
+        offsetTop = $(window).scrollTop();
+
+        gsap.to(".drumstick, .Meat, .vegetable, .peppers, .radish", {y: -offsetTop/10, duration:1})
+    })
+
     $(window).resize(function(){
         //計算 filter父層的高度 - header高度
         filter = $("#filterStoreWrap").offset().top;

@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEE-FOOD|惜食</title>
   <link rel="shortcut icon" href="../public/images/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="public/css/main.css">
-  <link rel="stylesheet" href="public/css/seefood.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="../public/js/main.js"></script>
-  <script src="../public/js/seefood.js"></script>
+  <link rel="stylesheet" href="../public/css/main.css">
+  <link rel="stylesheet" href="../public/css/seefood.css">
+  <link rel="stylesheet" href="../public/js/WOW-master/css/libs/animate.css">
 </head>
 <body> 
   <header>
@@ -42,7 +40,7 @@
           <li class="sm-block" id="sideListLogin"><a href="#">登入</a></li>
           <li class="sm-block"><a href="../register.html">註冊</a></li>
           <li> <a href="../favorite.html">我的最愛</a></li>
-          <li> <a href="#">歷史訂單</a></li>
+          <li> <a href="../order-history.html">歷史訂單</a></li>
           <li> <a href="#">付款方式</a></li>
           <li> <a href="../faq.html">幫助</a></li>
         </ul>
@@ -60,13 +58,13 @@
       <div>
         <label for="account">密碼:</label>
         <input class="lightInput loginInput inputYellow" type="text" id="password">
-      </div><a href="#"> 忘記密碼</a><a class="button lightYellowShadow" href="#">登入</a>
+      </div><a href="#"> 忘記密碼</a><a class="button lightYellowShadow" href="../seefood.html">登入</a>
       <p>其他登入/註冊</p>
       <ul class="otherLogin">
         <li class="lightYellowShadow"> <span>Facebook</span></li>
         <li class="lightYellowShadow"> <span>Google</span></li>
         <li class="lightYellowShadow"> <span>Apple</span></li>
-      </ul><a class="button lightYellowShadow" href="#">立即註冊</a>
+      </ul><a class="button lightYellowShadow" href="../register.html">立即註冊</a>
     </div>
   </section>
   <section id="kv">
@@ -374,4 +372,9 @@
       <div> <img src="../public/images/Facebook.svg" alt="Facebook"><img src="../public/images/Instagram.svg" alt="Facebook"></div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../public/js/WOW-master/dist/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"> </script>
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/seefood.js"></script>
 </body>
